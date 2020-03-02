@@ -7,6 +7,7 @@ import { AdvertCreationPage } from './pages/AdvertCreationPage'
 import { ProfilePage } from './pages/ProfilePage'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import './styling/app.css'
 
 export const App = () => {
   return (

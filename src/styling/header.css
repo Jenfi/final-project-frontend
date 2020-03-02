@@ -1,0 +1,29 @@
+header{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background: black;
+  color: #FFF;
+  height: 4rem;
+  padding-top: 1rem;
+  font-size: ;
+  font-family: 'Arsenal';
+  /* font-family: 'Suranna', ;
+  font-family: 'Maitree', ;
+  font-family: 'Gayathri', ; */
+}
+
+h1{
+  margin-left: auto;
+  position: absolute;
+  font-size: 50px;
+}
+
+.user-container{
+  margin-right: 12px;
+  margin-left: auto;
+}
+
+.user-container a{
+  margin: 5px;
+}
