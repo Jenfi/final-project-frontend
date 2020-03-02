@@ -1,0 +1,12 @@
+footer{
+  background: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 12px;
+}
