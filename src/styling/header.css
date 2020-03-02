@@ -1,28 +1,30 @@
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: baseline;
   background: black;
   color: #FFF;
   height: 4rem;
-  padding-top: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-family: 'Arsenal';
   /* font-family: 'Suranna'; */
   /* font-family: 'Maitree', ; */
   /* font-family: 'Gayathri', ; */
 }
 
-h1{
+.site-title {
   margin-left: auto;
   position: absolute;
-  font-size: 50px;
+  font-size: 42px;
 }
 
-.user-container{
+.user-container {
+  align-self: center;
   margin-right: 12px;
   margin-left: auto;
 }
 
-.user-container a{
+.user-container a {
   margin: 5px;
 }

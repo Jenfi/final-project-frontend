@@ -2,7 +2,7 @@ footer{
   background: black;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 12px;
 }
 

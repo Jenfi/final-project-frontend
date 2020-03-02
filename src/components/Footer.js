@@ -6,18 +6,19 @@ export const Footer = () => {
     <footer>
       <ul>
         <li>About</li>
-        <li>..</li>
-        <li>..</li>
-      </ul>
-      <ul>
+        <li>Who we are</li>
+        <li>Careers</li>
         <li>Contact</li>
-        <li>..</li>
-        <li>..</li>
       </ul>
       <ul>
-        <li>Customer Service</li>
-        <li>..</li>
-        <li>..</li>
+        <li>Support</li>
+        <li>Selling</li>
+        <li>Buying</li>
+      </ul>
+      <ul>
+        <li>Press</li>
+        <li>Useful links</li>
+        <li>Tools</li>
       </ul>
     </footer>
   )
