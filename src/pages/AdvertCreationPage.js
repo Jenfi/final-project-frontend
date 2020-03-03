@@ -1,9 +1,112 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Form } from '../components/form/Form'
+import { Input } from '../components/form/Input'
+import { Textarea } from '../components/form/Textarea'
+import { Select } from '../components/form/Select'
+import { SelectOption } from '../components/form/SelectOption'
+import { Button } from '../components/form/Button'
+import '../styling/advertCreation.css'
 
-// här vill vi lägga till add-formuläret (titel, beskrivning, pris, bild, condition, frakt, kategori, kontakt)
+// här vill vi lägga till add-formuläret
+// (titel, beskrivning, pris, bild, condition, frakt, kategori, kontakt)
 
+/* type={props.type}
+value={props.value}
+onChange={props.onChange}
+className={props.className}
+id={props.id} /> */
 export const AdvertCreationPage = () => {
+  const [adTitle, setAdTitle] = useState('')
+  const [adDescription, setAdDescription] = useState('')
+  const [adPrice, setAdPrice] = useState(0)
+  const [adCondition, setAdCondition] = useState('')
+  const [adDelivery, setAdDelivery] = useState('')
+  const [adCategory, setAdCategory] = useState('')
+
   return (
-    <h2>Create add</h2>
+    <main>
+      <h2 className="page-title">Create ad</h2>
+      <Form>
+        <Input
+          label="Title"
+          type="text"
+          id="adTitle"
+          onChange={(event) => setAdTitle(event.target.value)}
+          value={adTitle} />
+
+        <Select
+          label="Category"
+          id="adCategory"
+          value={adCategory}
+          onChange={(event) => setAdCategory(event.target.value)}>
+          <SelectOption
+            value="Textiles"
+            option="Textiles" />
+          <SelectOption
+            value="Lightning"
+            option="Lightning" />
+          <SelectOption
+            value="Decoration"
+            option="Decoration" />
+          <SelectOption
+            value="Rugs"
+            option="Rugs" />
+          <SelectOption
+            value="Furniture"
+            option="Furniture" />
+        </Select>
+
+        <Select
+          label="Condition"
+          id="adCondition"
+          value={adCondition}
+          onChange={(event) => setAdCondition(event.target.value)}>
+          <SelectOption
+            value="As new"
+            option="As new" />
+          <SelectOption
+            value="Good"
+            option="Good" />
+          <SelectOption
+            value="Used"
+            option="Used" />
+          <SelectOption
+            value="Needs alterations"
+            option="Needs alterations" />
+        </Select>
+
+        <Textarea
+          label="Description"
+          id={adDescription}
+          value={adDescription}
+          onChange={(event) => setAdDescription(event.target.value)}
+          rows="10" />
+
+        <Input
+          label="Price"
+          type="text"
+          id="adPrice"
+          onChange={(event) => setAdPrice(event.target.value)}
+          value={adPrice} />
+
+        <Select
+          label="Delivery"
+          id="adDelivery"
+          value={adDelivery}
+          onChange={(event) => setAdDelivery(event.target.value)}>
+          <SelectOption
+            value="Pick up"
+            option="Pick up" />
+          <SelectOption
+            value="Meet up"
+            option="Meet up" />
+          <SelectOption
+            value="Ship"
+            option="Ship" />
+        </Select>
+
+        <Button text="Save ad" />
+      </Form>
+    </main>
   )
 }

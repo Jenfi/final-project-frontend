@@ -1,0 +1,49 @@
+.page-title {
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+label {
+  font-size: 0.875rem;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+button {
+  align-self: flex-end;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 2rem
+}
+
+@media screen and (min-width: 668px) {
+  .page-title,
+  form {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .page-title,
+  form {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
