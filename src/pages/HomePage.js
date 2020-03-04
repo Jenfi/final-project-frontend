@@ -1,14 +1,14 @@
 import React from 'react'
-import "../styling/homepage.css"
-import yellowchair from "../assets/images/yellowchair.jpeg"
-import "../styling/adcard.css"
-import vase from "../assets/images/potBIG.jpg"
-import chair from "../assets/images/chairBIG.jpg"
-import leatherSofa from "../assets/images/leather-sofaBIG.jpg"
-import stool from "../assets/images/stoolBIG.jpg"
-import lamp from "../assets/images/lampBIG.jpg"
+import '../styling/homepage.css'
+import yellowchair from '../assets/images/yellowchair.jpeg'
+import '../styling/adcard.css'
+import vase from '../assets/images/potBIG.jpg'
+import chair from '../assets/images/chairBIG.jpg'
+import leatherSofa from '../assets/images/leather-sofaBIG.jpg'
+import stool from '../assets/images/stoolBIG.jpg'
+import lamp from '../assets/images/lampBIG.jpg'
 
-//DET HÄR ÄR HOMEPAGE
+// DET HÄR ÄR HOMEPAGE
 
 // här vill vi ha en beksrivning av sidan, menu bar, en hero-section, lista med ads, modal-box, footer, header
 
