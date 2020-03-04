@@ -22,26 +22,32 @@ export const HomePage = () => {
           <article className="ad-card">
             <h3>Ad title</h3>
             <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+            <p className="price-tag">200:-</p>
           </article>
           <article className="ad-card">
             <h3>Ad title</h3>
             <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+            <p className="price-tag">200:-</p>
           </article>
           <article className="ad-card">
             <h3>Ad title</h3>
             <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+            <p className="price-tag">200:-</p>
           </article>
           <article className="ad-card">
             <h3>Ad title</h3>
             <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+            <p className="price-tag">200:-</p>
           </article>
           <article className="ad-card">
             <h3>Ad title</h3>
             <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+            <p className="price-tag">200:-</p>
           </article>
           <article className="ad-card">
             <h3>Ad title</h3>
             <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+            <p className="price-tag">200:-</p>
           </article>
         </div>
 

@@ -26,3 +26,10 @@ margin: 6px;
 .ad-image { 
 width: 100%;
 }
+
+.price-tag {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
+    
+}
