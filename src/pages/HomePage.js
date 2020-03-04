@@ -2,10 +2,11 @@ import React from 'react'
 import "../styling/homepage.css"
 import yellowchair from "../assets/images/yellowchair.jpeg"
 import "../styling/adcard.css"
-import vase from "../assets/images/pot.jpg"
-import chair from "../assets/images/green-chair.jpg"
-import leatherSofa from "../assets/images/leather-couch.jpg"
-import stool from "../assets/images/the-stool.jpg"
+import vase from "../assets/images/potBIG.jpg"
+import chair from "../assets/images/chairBIG.jpg"
+import leatherSofa from "../assets/images/leather-sofaBIG.jpg"
+import stool from "../assets/images/stoolBIG.jpg"
+import lamp from "../assets/images/lampBIG.jpg"
 
 //DET HÄR ÄR HOMEPAGE
 
@@ -21,11 +22,14 @@ export const HomePage = () => {
             <li> <img className="hero-image" src={vase} alt="Vase" /></li>
             <li> <img className="hero-image" src={stool} alt="Chair and stool" /></li>
             <li> <img className="hero-image" src={leatherSofa} alt="Sofa" /></li>
+            <li> <img className="hero-image" src={lamp} alt="Lamp" /></li>
           </ul>
         </div>
-        <h2 className="hero-title">Furniture made easy.</h2>
-        <p className="hero-tagline">We help you sell your used furniture and give them a new home.</p>
-        <button type="button" className="CTA-button">Start selling</button>
+        <div className="hero-content">
+          <h2 className="hero-title">Furniture made easy.</h2>
+          <p className="hero-tagline">We help you sell your used furniture and give them a new home.</p>
+          <button type="button" className="CTA-button">Start selling</button>
+        </div>
       </section>
       <section className="ad-listing">
         <h2 className="ad-listing-header">Recently added</h2>
