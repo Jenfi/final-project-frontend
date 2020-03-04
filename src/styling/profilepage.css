@@ -1,0 +1,25 @@
+.userlogo {
+    width: 20%;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.userprofile {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+}
+
+h2 {
+    font-family: 'Arsenal';
+    font-size: 35px;
+}
+
+p { 
+    margin-top: 10px;
+}
+
+.profile-box {
+    padding: 50px;
+    margin: 10px;
+}
