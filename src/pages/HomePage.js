@@ -1,11 +1,12 @@
 import React from 'react'
-import "../styling/homepage.css"
-import yellowchair from "../assets/images/yellowchair.jpeg"
-import "../styling/adcard.css"
+import { Link } from 'react-router-dom'
+import '../styling/homepage.css'
+import '../styling/adListing.css'
+import yellowchair from '../assets/images/yellowchair.jpeg'
 
-//DET HÄR ÄR HOMEPAGE
-
-// här vill vi ha en beksrivning av sidan, menu bar, en hero-section, lista med ads, modal-box, footer, header
+/* På homepage vill vi ha en beksrivning av sidan, menu bar, en hero-section,
+lista med ads, modal-box, footer, header
+*/
 
 export const HomePage = () => {
   return (
@@ -18,39 +19,39 @@ export const HomePage = () => {
       <section className="ad-listing">
         <h2 className="ad-listing-header">Recently added</h2>
 
-        <div className="ad-container">
-          <article className="ad-card">
-            <h3>Ad title</h3>
-            <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-            <p className="price-tag">200:-</p>
-          </article>
-          <article className="ad-card">
-            <h3>Ad title</h3>
-            <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-            <p className="price-tag">200:-</p>
-          </article>
-          <article className="ad-card">
-            <h3>Ad title</h3>
-            <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-            <p className="price-tag">200:-</p>
-          </article>
-          <article className="ad-card">
-            <h3>Ad title</h3>
-            <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-            <p className="price-tag">200:-</p>
-          </article>
-          <article className="ad-card">
-            <h3>Ad title</h3>
-            <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-            <p className="price-tag">200:-</p>
-          </article>
-          <article className="ad-card">
-            <h3>Ad title</h3>
-            <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-            <p className="price-tag">200:-</p>
-          </article>
-        </div>
-
+        <article className="ad-card">
+          <h3>Ad title</h3>
+          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <p className="price-tag">200:-</p>
+        </article>
+        <article className="ad-card">
+          <h3>Ad title</h3>
+          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <p className="price-tag">200:-</p>
+        </article>
+        <article className="ad-card">
+          <h3>Ad title</h3>
+          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <p className="price-tag">200:-</p>
+        </article>
+        <article className="ad-card">
+          <h3>Ad title</h3>
+          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <p className="price-tag">200:-</p>
+        </article>
+        <article className="ad-card">
+          <h3>Ad title</h3>
+          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <p className="price-tag">200:-</p>
+        </article>
+        <article className="ad-card">
+          <h3>Ad title</h3>
+          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <p className="price-tag">200:-</p>
+        </article>
+        <p className="ads-navigation">
+          <Link to="/adverts">All ads</Link>
+        </p>
       </section>
     </>
   )
