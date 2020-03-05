@@ -10,29 +10,47 @@ import '../styling/advertCreation.css'
 // här vill vi lägga till add-formuläret
 // (titel, beskrivning, pris, bild, condition, frakt, kategori, kontakt)
 
-/* type={props.type}
-value={props.value}
-onChange={props.onChange}
-className={props.className}
-id={props.id} /> */
+/* 
+Response from uploaded image
+name: "trycatchflow.PNG"
+lastModified: 1581449297149
+lastModifiedDate: Tue Feb 11 2020 20:28:17 GMT+0100 (centraleuropeisk normaltid) {}
+webkitRelativePath: ""
+size: 26023
+type: "image/png"
+*/
+
 export const AdvertCreationPage = () => {
   const [adTitle, setAdTitle] = useState('')
   const [adDescription, setAdDescription] = useState('')
   const [adPrice, setAdPrice] = useState(0)
+  const [adImage, setAdImage] = useState(null)
   const [adCondition, setAdCondition] = useState('')
   const [adDelivery, setAdDelivery] = useState('')
   const [adCategory, setAdCategory] = useState('')
 
+  const handleFormSubmit = (event) => {
+    event.preventDeafult()
+  }
+
+  console.log(adImage)
+
   return (
     <main>
-      <h2 className="page-title">Create ad</h2>
-      <Form>
+      <Form onSubmit={handleFormSubmit}>
+        <h2 className="page-title">Create ad</h2>
         <Input
           label="Title"
           type="text"
           id="adTitle"
           onChange={(event) => setAdTitle(event.target.value)}
           value={adTitle} />
+        <Input
+          label="Image"
+          type="file"
+          id="adImage"
+          onChange={(event) => setAdImage(event.target.files[0])} />
+        {adImage && (adImage.name)}
 
         <Select
           label="Category"
