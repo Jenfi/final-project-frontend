@@ -1,0 +1,15 @@
+.sign-up-form {
+  padding: 2rem 1rem;
+  max-width: 500px;
+}
+
+.sign-up-heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 668px) {
+  .sign-up-form {
+    padding: 4rem;
+  }
+}
