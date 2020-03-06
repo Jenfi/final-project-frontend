@@ -5,8 +5,8 @@ import { AdvertPage } from './pages/AdvertPage'
 import { AdvertsListPage } from './pages/AdvertsListPage'
 import { AdvertCreationPage } from './pages/AdvertCreationPage'
 import { ProfilePage } from './pages/ProfilePage'
-import { SignInForm } from './components/sign-in/SignInForm'
-import { RegisterForm } from './components/register/RegisterForm'
+import { Registration } from './pages/Registration'
+import { SignIn } from './pages/SignIn'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import './styling/app.css'
@@ -15,11 +15,15 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <SignInForm />
-      <RegisterForm />
       <Switch>
         <Route exact path="/">
           <HomePage />
+        </Route>
+        <Route exact path="/registration">
+          <Registration />
+        </Route>
+        <Route exact path="/sign-in">
+          <SignIn />
         </Route>
         <Route exact path="/adverts">
           <AdvertsListPage />
