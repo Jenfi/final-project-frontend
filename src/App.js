@@ -5,6 +5,8 @@ import { AdvertPage } from './pages/AdvertPage'
 import { AdvertsListPage } from './pages/AdvertsListPage'
 import { AdvertCreationPage } from './pages/AdvertCreationPage'
 import { ProfilePage } from './pages/ProfilePage'
+import { Registration } from './pages/Registration'
+import { SignIn } from './pages/SignIn'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import './styling/app.css'
@@ -16,6 +18,12 @@ export const App = () => {
       <Switch>
         <Route exact path="/">
           <HomePage />
+        </Route>
+        <Route exact path="/registration">
+          <Registration />
+        </Route>
+        <Route exact path="/sign-in">
+          <SignIn />
         </Route>
         <Route exact path="/adverts">
           <AdvertsListPage />

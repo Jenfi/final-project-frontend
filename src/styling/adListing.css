@@ -1,0 +1,76 @@
+.ad-listing {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    padding:  4rem 1rem;
+    max-width: 31.25rem;
+    width: 100%;
+}
+
+.ad-listing-header {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.ad-card {
+    grid-column: 1 / span 1;
+    width: 100%;
+}
+
+.ad-image { 
+    width: 100%;
+}
+
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.ads-navigation {
+    grid-column: 1 / span 1;
+    justify-self: end;
+}
+
+@media screen and (min-width: 41.75rem) {
+    .ad-listing {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 40rem;
+    }
+
+    .ad-listing-header { 
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+    
+    .ad-card {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .ads-navigation {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .ad-listing {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 62.5rem;
+    }
+
+    .ad-listing-header { 
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;
+    }
+    
+    .ad-card {
+        width: 100%;
+    }
+
+    .ads-navigation {
+        grid-column: 1 / span 3;
+    }
+}

@@ -1,20 +1,23 @@
-.page-title {
-  padding: 1rem;
-}
-
 form {
+  background-color: #faf9f8;
   display: flex;
   flex-direction: column;
+  margin: 1rem auto 2rem auto;
   padding: 1rem;
+  max-width: 300px;
+  width: 100%;
 }
 
 label {
   font-size: 0.875rem;
+  font-weight: 700;
 }
 
 input,
 select,
 textarea {
+  border: 1px solid #d0d0d0;
+  border-radius: 0.2rem;
   display: block;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -33,17 +36,7 @@ button {
 }
 
 @media screen and (min-width: 668px) {
-  .page-title,
   form {
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .page-title,
-  form {
-    margin: 0 auto;
-    width: 60%;
+    max-width: 600px;
   }
 }

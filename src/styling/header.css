@@ -19,6 +19,11 @@ header {
   font-size: 42px;
 }
 
+.site-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .user-container {
   align-self: center;
   margin-right: 12px;
