@@ -33,3 +33,9 @@ header {
 .user-container a {
   margin: 5px;
 }
+
+.sign-in-link,
+.registration-link {
+  color: #fff;
+  text-decoration: none;
+}

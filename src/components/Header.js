@@ -8,8 +8,8 @@ export const Header = () => {
       <h1 className="site-title"><Link to="/">HAGGLE</Link></h1>
       <div className="user-container">
         {/* if signed in render <icon> <p>{user.name}</p> */}
-        <a>Sign in</a>
-        <a>Register</a>
+        <Link to="/sign-in" className="sign-in-link">Sign in</Link>
+        <Link to="/registration" className="registration-link">Register</Link>
       </div>
     </header>
   )
