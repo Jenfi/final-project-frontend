@@ -1,11 +1,20 @@
 .hero {
-background-image: url('../assets/images/bluechair.jpeg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 70vh;
+/* background-image: url('../assets/images/bluechair.jpeg'); */
+/* background-size: cover; */
+/* background-repeat: no-repeat; */
+/* height: 70vh; */
 display: flex;
 flex-direction: column;
 justify-content: center;
+align-items: center;
+}
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
 
 .hero-title {
@@ -31,4 +40,47 @@ margin-top: 32px;
 background-color: transparent;
 color: white;
 border: 2px solid white;
+}
+.auto-slider{
+  width: 100%;
+  height: auto;
+  overflow-X:hidden;
+}
+
+.auto-slider_content{
+  z-index: -2;
+  list-style: none;
+  display: flex;
+  animation-name: slide;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;   
+}
+
+.auto-slider_content img{
+  z-index: -3;
+  height: 720px;
+}
+
+@keyframes slide{
+10%{
+  transform: translateX(0);
+}
+25%{
+  transform: translateX(-1080px);
+}
+40%{
+  transform: translateX(-2160px);
+}
+55%{
+  transform: translateX(-3340px);
+}
+70%{
+  transform: translateX(-2160px);
+}
+85%{
+  transform: translateX(-1080px);
+}
+90%{
+  transform: translateX(0);
+}
 }
