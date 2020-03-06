@@ -1,0 +1,15 @@
+.register-form {
+  padding: 2rem 1rem;
+  max-width: 500px;
+}
+
+.register-heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 668px) {
+  .register-form {
+    padding: 4rem;
+  }
+}
