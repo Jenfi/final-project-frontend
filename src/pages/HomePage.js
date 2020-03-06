@@ -20,33 +20,33 @@ export const HomePage = () => {
         <h2 className="ad-listing-header">Recently added</h2>
 
         <article className="ad-card">
-          <h3>Ad title</h3>
           <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <h3>Ad title</h3>
           <p className="price-tag">200:-</p>
         </article>
         <article className="ad-card">
-          <h3>Ad title</h3>
           <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <h3>Ad title</h3>
           <p className="price-tag">200:-</p>
         </article>
         <article className="ad-card">
-          <h3>Ad title</h3>
           <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <h3>Ad title</h3>
           <p className="price-tag">200:-</p>
         </article>
         <article className="ad-card">
-          <h3>Ad title</h3>
           <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <h3>Ad title</h3>
           <p className="price-tag">200:-</p>
         </article>
         <article className="ad-card">
-          <h3>Ad title</h3>
           <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <h3>Ad title</h3>
           <p className="price-tag">200:-</p>
         </article>
         <article className="ad-card">
-          <h3>Ad title</h3>
           <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
+          <h3>Ad title</h3>
           <p className="price-tag">200:-</p>
         </article>
         <p className="ads-navigation">
