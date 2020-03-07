@@ -5,18 +5,17 @@ export const Footer = () => {
   return (
     <footer>
       <ul>
-        <li>About</li>
+        <li className="footer-header">About</li>
         <li>Who we are</li>
-        <li>Careers</li>
         <li>Contact</li>
       </ul>
       <ul>
-        <li>Support</li>
+        <li className="footer-header">Support</li>
         <li>Selling</li>
         <li>Buying</li>
       </ul>
       <ul>
-        <li>Press</li>
+        <li className="footer-header">Press</li>
         <li>Useful links</li>
         <li>Tools</li>
       </ul>

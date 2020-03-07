@@ -52,7 +52,7 @@ border: 2px solid white;
   list-style: none;
   display: flex;
   animation-name: slide;
-  animation-duration: 20s;
+  animation-duration: 25s;
   animation-iteration-count: infinite;   
 }
 
@@ -83,4 +83,9 @@ border: 2px solid white;
 90%{
   transform: translateX(0);
 }
+}
+
+.ads-navigation {
+  text-decoration: none;
+  color: black;
 }

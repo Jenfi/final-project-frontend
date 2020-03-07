@@ -10,3 +10,7 @@ ul{
   list-style-type: none;
   margin: 12px;
 }
+
+.footer-header {
+  font-weight: bold;
+}
