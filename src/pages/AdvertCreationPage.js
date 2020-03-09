@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
 import { Textarea } from '../components/form/Textarea'
@@ -19,6 +19,7 @@ webkitRelativePath: ""
 size: 26023
 type: "image/png"
 */
+const API_URL = "http://localhost:8080/adverts"
 
 export const AdvertCreationPage = () => {
   const [adTitle, setAdTitle] = useState('')
@@ -29,8 +30,19 @@ export const AdvertCreationPage = () => {
   const [adDelivery, setAdDelivery] = useState('')
   const [adCategory, setAdCategory] = useState('')
 
+  const fileInput = useRef()
+
   const handleFormSubmit = (event) => {
     event.preventDeafult()
+    const formData = new FormData()
+    formData.append('image', fileInput.current.files[0])
+    formData.append('adTitle', adTitle)
+
+    fetch(API_URL, { method: 'POST', body: formData })
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json)
+      })
   }
 
   console.log(adImage)
@@ -48,6 +60,7 @@ export const AdvertCreationPage = () => {
         <Input
           label="Image"
           type="file"
+          ref={fileInput}
           id="adImage"
           onChange={(event) => setAdImage(event.target.files[0])} />
         {adImage && (adImage.name)}
