@@ -33,7 +33,6 @@ export const AdvertCreationPage = () => {
     event.preventDeafult()
   }
 
-  console.log(adImage)
 
   return (
     <main>
