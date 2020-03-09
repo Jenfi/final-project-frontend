@@ -29,7 +29,7 @@ export const HomePage = () => {
           </ul>
         </div>
         <div className="hero-content">
-          <h2 className="hero-title">Furniture made easy.</h2>
+          <h2 className="hero-title">Furniture made easy. HEJ</h2>
           <p className="hero-tagline">We help you sell your used furniture and give them a new home.</p>
           <button type="button" className="CTA-button">Start selling</button>
         </div>
