@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Link } from 'react-router-dom'
+import { CardList } from '../components/card/CardList'
+import { Card } from '../components/card/Card'
+import { CardImage } from '../components/card/CardImage'
+import { CardLink } from '../components/card/CardLink'
+import { Heading } from '../components/card/Heading'
+import { Text } from '../components/card/Text'
 import '../styling/homepage.css'
 import yellowchair from '../assets/images/yellowchair.jpeg'
 import '../styling/adListing.css'
@@ -16,6 +22,12 @@ import lamp from '../assets/images/lampBIG.jpg'
 
 
 export const HomePage = () => {
+  const [ads, setAds] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:8080/adverts').then((res) => res.json()).then((json) => { setAds(json) })
+  }, [])
+
   return (
     <>
       <section className="hero">
@@ -34,39 +46,18 @@ export const HomePage = () => {
           <button type="button" className="CTA-button">Start selling</button>
         </div>
       </section>
-      <section className="ad-listing">
+      <section className="recent-ads">
         <h2 className="ad-listing-header">Recently added</h2>
 
-        <article className="ad-card">
-          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-          <h3>Ad title</h3>
-          <p className="price-tag">200:-</p>
-        </article>
-        <article className="ad-card">
-          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-          <h3>Ad title</h3>
-          <p className="price-tag">200:-</p>
-        </article>
-        <article className="ad-card">
-          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-          <h3>Ad title</h3>
-          <p className="price-tag">200:-</p>
-        </article>
-        <article className="ad-card">
-          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-          <h3>Ad title</h3>
-          <p className="price-tag">200:-</p>
-        </article>
-        <article className="ad-card">
-          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-          <h3>Ad title</h3>
-          <p className="price-tag">200:-</p>
-        </article>
-        <article className="ad-card">
-          <img className="ad-image" src={yellowchair} alt="Yellow Chair" />
-          <h3>Ad title</h3>
-          <p className="price-tag">200:-</p>
-        </article>
+        <CardList className="ad-listing">
+          {ads.map(ad => (
+            <Card className="ad-card" key={ad._id}>
+              <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />
+              <Heading level="3" className="ad-title">{ad.title}</Heading>
+              <Text className="price-tag">{ad.price}</Text>
+            </Card>
+          ))}
+        </CardList>
         <p className="ads-navigation">
           <Link to="/adverts">All ads</Link>
         </p>

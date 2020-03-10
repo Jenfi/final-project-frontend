@@ -86,6 +86,10 @@ border: 2px solid white;
 }
 
 .ads-navigation {
-  text-decoration: none;
   color: black;
+  margin: 0 auto;
+  padding:  4rem 1rem;
+  text-decoration: none;
+  max-width: 31.25rem;
+  width: 100%;
 }
