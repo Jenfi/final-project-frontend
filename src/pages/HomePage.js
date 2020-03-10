@@ -20,7 +20,6 @@ import lamp from '../assets/images/lampBIG.jpg'
 
 // här vill vi ha en beksrivning av sidan, menu bar, en hero-section, lista med ads, modal-box, footer, header
 
-
 export const HomePage = () => {
   const [ads, setAds] = useState([])
 
@@ -53,7 +52,8 @@ export const HomePage = () => {
           {ads.map(ad => (
             <Card className="ad-card" key={ad._id}>
               <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />
-              <Heading level="3" className="ad-title">{ad.title}</Heading>
+              <Heading level="3" className="ad-title">
+                <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink></Heading>
               <Text className="price-tag">{ad.price}</Text>
             </Card>
           ))}
