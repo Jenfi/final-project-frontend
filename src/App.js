@@ -31,7 +31,7 @@ export const App = () => {
         <Route exact path="/adverts/:advertId">
           <AdvertPage />
         </Route>
-        <Route exact path="/adverts/create">
+        <Route exact path="/create-ad">
           <AdvertCreationPage />
         </Route>
         <Route exact path="/profile">
