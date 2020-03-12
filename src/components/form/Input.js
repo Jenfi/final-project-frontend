@@ -9,7 +9,8 @@ export const Input = (props) => {
         value={props.value}
         onChange={props.onChange}
         className={props.className}
-        id={props.id} />
+        id={props.id}
+        name={props.name} />
     </label>
   )
 }
