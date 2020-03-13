@@ -40,6 +40,7 @@ export const HomePage = () => {
             <li> <img className="hero-image" src={lamp} alt="Lamp" /></li>
           </ul>
         </div>
+        <div className="hero-strip-overlay"></div>
         <div className="hero-content">
           <h2 className="hero-title">Furniture made easy.</h2>
           <p className="hero-tagline">We help you sell your used furniture and give them a new home.</p>
