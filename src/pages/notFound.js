@@ -9,8 +9,6 @@ export const NotFound = () => {
                 <h1 className="not-found-page-title">Page not found</h1>
                 <p className="not-found-info-text">The site you are trying to reach was not found.</p>
                 <Link to="/" className="back-to-homepage">Back to homepage </Link>
-
-
             </article>
 
         </main>
