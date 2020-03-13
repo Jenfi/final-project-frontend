@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { fetchData } from '../services/api'
 import '../styling/advertPage.css'
-import topImage from '../assets/images/yellowchair.jpeg'
 
 // Här vill vi ha en bild, pris, namn på vara, beskrivning av vara,
 // information om säljare, publiceringsdatum, leveransinfo (katergori), condition, bread crumbs
@@ -10,17 +10,17 @@ export const AdvertPage = () => {
   const [advert, setAdvert] = useState([])
   const [loading, setLoading] = useState(false)
   const { advertId } = useParams()
-  const API_URL = `http://localhost:8080/adverts/${advertId}`
+
+  const AD_URL = `http://localhost:8080/adverts/${advertId}`
+
   useEffect(() => {
     setLoading(true)
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json)
-        setAdvert(json)
+    fetchData(AD_URL)
+      .then((adData) => {
+        setAdvert(adData)
         setLoading(false)
       })
-  }, [])
+  }, [AD_URL])
 
   return (
     <main>
