@@ -9,6 +9,7 @@ import { Registration } from './pages/Registration'
 import { SignIn } from './pages/SignIn'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import { NotFound } from './pages/NotFound'
 import './styling/app.css'
 
 export const App = () => {
@@ -37,6 +38,7 @@ export const App = () => {
         <Route exact path="/profile">
           <ProfilePage />
         </Route>
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </BrowserRouter>
