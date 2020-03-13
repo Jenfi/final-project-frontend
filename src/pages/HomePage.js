@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
 import { Link } from 'react-router-dom'
+import { fetchData } from '../services/api'
 import { CardList } from '../components/card/CardList'
 import { Card } from '../components/card/Card'
 import { CardImage } from '../components/card/CardImage'
@@ -8,7 +8,6 @@ import { CardLink } from '../components/card/CardLink'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
 import '../styling/homepage.css'
-import yellowchair from '../assets/images/yellowchair.jpeg'
 import '../styling/adListing.css'
 import vase from '../assets/images/potBIG.jpg'
 import chair from '../assets/images/chairBIG.jpg'
@@ -22,9 +21,11 @@ import lamp from '../assets/images/lampBIG.jpg'
 
 export const HomePage = () => {
   const [ads, setAds] = useState([])
+  const ADS_URL = 'http://localhost:8080/adverts'
 
   useEffect(() => {
-    fetch('http://localhost:8080/adverts').then((res) => res.json()).then((json) => { setAds(json) })
+    fetchData(ADS_URL)
+      .then((adsData) => { setAds(adsData) })
   }, [])
 
   return (
@@ -49,11 +50,12 @@ export const HomePage = () => {
         <h2 className="ad-listing-header">Recently added</h2>
 
         <CardList className="ad-listing">
-          {ads.map(ad => (
+          {ads.map((ad) => (
             <Card className="ad-card" key={ad._id}>
               <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />
               <Heading level="3" className="ad-title">
-                <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink></Heading>
+                <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
+              </Heading>
               <Text className="price-tag">{ad.price}</Text>
             </Card>
           ))}
