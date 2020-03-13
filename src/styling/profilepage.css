@@ -1,13 +1,15 @@
 .userlogo {
-    width: 20%;
+    width: 90%;
     border-radius: 50%;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .userprofile {
-    margin: 0 auto;
-    display: flex;
-    width: 90%;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
 }
 
 h2 {

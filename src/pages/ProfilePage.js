@@ -9,7 +9,9 @@ import userlogo from '../assets/images/userlogo.png'
 export const ProfilePage = () => {
   return (
     <main className="userprofile">
-      <img className="userlogo" src={userlogo} alt="User Logo" />
+      <div className="image-container">
+        <img className="userlogo" src={userlogo} alt="User Logo" />
+      </div>
       <section className="profile-box">
         <h2>Hi (name)!</h2>
         <p>Username</p>

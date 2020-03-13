@@ -35,11 +35,6 @@ export const RegisterForm = () => {
 
   return (
     <>
-      {success && (
-        <div className="success">
-          <h2>Welcome to Haggle!</h2>
-          <p>You can now sign in and create some ads.</p>
-        </div>)}
       {!success && (
         <Form className="register-form" onSubmit={handleRegistration}>
           <h2 className="register-heading">Register</h2>
