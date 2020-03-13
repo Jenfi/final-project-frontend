@@ -1,12 +1,18 @@
 import React from 'react'
 import '../styling/notFound.css'
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export const notFound = () => {
+export const NotFound = () => {
     return (
         <main className="errorPage">
-            <p>ERROR!</p>
-            <p>The site you are trying to reach was not found.</p>
+            <article className="error-message-container">
+                <h1 className="not-found-page-title">Page not found</h1>
+                <p className="not-found-info-text">The site you are trying to reach was not found.</p>
+                <Link to="/" className="back-to-homepage">Back to homepage </Link>
+
+
+            </article>
+
         </main>
     )
 }
