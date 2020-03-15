@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { PrivateRoute } from './components/PrivateRoute'
 import { HomePage } from './pages/HomePage'
 import { AdvertPage } from './pages/AdvertPage'
 import { AdvertsListPage } from './pages/AdvertsListPage'
@@ -17,27 +18,13 @@ export const App = () => {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route exact path="/registration">
-          <Registration />
-        </Route>
-        <Route exact path="/sign-in">
-          <SignIn />
-        </Route>
-        <Route exact path="/adverts">
-          <AdvertsListPage />
-        </Route>
-        <Route exact path="/adverts/:advertId">
-          <AdvertPage />
-        </Route>
-        <Route exact path="/create-ad">
-          <AdvertCreationPage />
-        </Route>
-        <Route exact path="/profile">
-          <ProfilePage />
-        </Route>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/registration" component={Registration} />
+        <Route exact path="/sign-in" component={SignIn} />
+        <Route exact path="/adverts" component={AdvertsListPage} />
+        <Route exact path="/adverts/:advertId" component={AdvertPage} />
+        <PrivateRoute exact path="/create-ad" component={AdvertCreationPage} />
+        <PrivateRoute exact path="/profile" component={ProfilePage} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
