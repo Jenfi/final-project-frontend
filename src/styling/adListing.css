@@ -1,7 +1,7 @@
 .ad-listing {
     display: grid;
     grid-auto-rows: auto;
-    grid-gap: 1rem;
+    grid-gap: 2rem 1rem;
     grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
     padding:  2rem 1rem 2rem 1rem;
@@ -53,7 +53,7 @@ i {
 }
 
 .ad-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .ad-image { 
@@ -61,7 +61,7 @@ i {
 }
 
 .price-tag {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-top: 2px;
 }
