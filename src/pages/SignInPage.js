@@ -5,7 +5,7 @@ import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
 import '../styling/form.css'
 
-export const SignIn = () => {
+export const SignInPage = () => {
   const [userInput, setUserInput] = useState({})
   const AUTH_URL = 'http://localhost:8080/sessions'
 

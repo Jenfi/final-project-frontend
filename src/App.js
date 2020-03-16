@@ -5,11 +5,11 @@ import { AdvertPage } from './pages/AdvertPage'
 import { AdvertsListPage } from './pages/AdvertsListPage'
 import { AdvertCreationPage } from './pages/AdvertCreationPage'
 import { ProfilePage } from './pages/ProfilePage'
-import { Registration } from './pages/Registration'
-import { SignIn } from './pages/SignIn'
+import { RegisterPage } from './pages/RegisterPage'
+import { SignInPage } from './pages/SignInPage'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import { NotFound } from './pages/NotFound'
+import { NotFoundPage } from './pages/NotFoundPage'
 import './styling/app.css'
 
 export const App = () => {
@@ -22,10 +22,10 @@ export const App = () => {
             <HomePage />
           </Route>
           <Route exact path="/register">
-            <Registration />
+            <RegisterPage />
           </Route>
           <Route exact path="/sign-in">
-            <SignIn />
+            <SignInPage />
           </Route>
           <Route exact path="/adverts">
             <AdvertsListPage />
@@ -39,7 +39,7 @@ export const App = () => {
           <Route exact path="/profile">
             <ProfilePage />
           </Route>
-          <Route component={NotFound} />
+          <Route component={NotFoundPage} />
         </Switch>
       </main>
       <Footer />

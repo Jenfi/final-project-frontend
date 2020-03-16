@@ -2,7 +2,7 @@ import React from 'react'
 import '../styling/notFound.css'
 import { Link } from 'react-router-dom'
 
-export const NotFound = () => {
+export const NotFoundPage = () => {
     return (
         <main className="errorPage">
             <article className="error-message-container">
