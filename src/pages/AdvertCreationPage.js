@@ -33,10 +33,10 @@ export const AdvertCreationPage = () => {
     formData.append('delivery', adDelivery)
     formData.append('category', adCategory)
     formData.append('condition', adCondition)
-    // seller id is from my local db
-    formData.append('seller', '5e616bad90ef293bf06ac320')
+
+    const accessToken = window.localStorage.getItem('accessToken')
     console.log(formData)
-    fetch(API_URL, { method: 'POST', body: formData })
+    fetch(API_URL, { method: 'POST', body: formData, headers: { 'Authorization': accessToken } })
       .then((res) => res.json())
       .then((json) => {
         console.log(json)
