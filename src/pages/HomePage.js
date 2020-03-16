@@ -10,11 +10,7 @@ import { Text } from '../components/card/Text'
 import { Hero } from '../components/Hero'
 import '../styling/homepage.css'
 import '../styling/adListing.css'
-import vase from '../assets/images/potBIG.jpg'
-import chair from '../assets/images/chairBIG.jpg'
-import leatherSofa from '../assets/images/leather-sofaBIG.jpg'
-import stool from '../assets/images/stoolBIG.jpg'
-import lamp from '../assets/images/lampBIG.jpg'
+
 
 // DET HÄR ÄR HOMEPAGE
 
