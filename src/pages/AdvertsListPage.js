@@ -6,19 +6,31 @@ import { CardImage } from '../components/card/CardImage'
 import { CardLink } from '../components/card/CardLink'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
+import { Spinner } from './Spinner'
 
 /* Här vill vi ha alla annonser listade, (eventuellt select katergori checkbox?)
 radio? samt en home/return-knapp */
 
 export const AdvertsListPage = () => {
   const [ads, setAds] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
 
   const ADS_URL = 'http://localhost:8080/adverts'
 
   useEffect(() => {
+    setIsLoading(true)
     fetchData(ADS_URL)
-      .then((adsData) => { setAds(adsData) })
+      .then((adsData) => {
+        setAds(adsData)
+        setIsLoading(false)
+      })
   }, [])
+
+  if (isLoading === true) {
+    return (
+      <Spinner />
+    )
+  }
 
   return (
     <main>
