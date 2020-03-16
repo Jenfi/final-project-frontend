@@ -16,30 +16,32 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route exact path="/registration">
-          <Registration />
-        </Route>
-        <Route exact path="/sign-in">
-          <SignIn />
-        </Route>
-        <Route exact path="/adverts">
-          <AdvertsListPage />
-        </Route>
-        <Route exact path="/adverts/:advertId">
-          <AdvertPage />
-        </Route>
-        <Route exact path="/create-ad">
-          <AdvertCreationPage />
-        </Route>
-        <Route exact path="/profile">
-          <ProfilePage />
-        </Route>
-        <Route component={NotFound} />
-      </Switch>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/registration">
+            <Registration />
+          </Route>
+          <Route exact path="/sign-in">
+            <SignIn />
+          </Route>
+          <Route exact path="/adverts">
+            <AdvertsListPage />
+          </Route>
+          <Route exact path="/adverts/:advertId">
+            <AdvertPage />
+          </Route>
+          <Route exact path="/create-ad">
+            <AdvertCreationPage />
+          </Route>
+          <Route exact path="/profile">
+            <ProfilePage />
+          </Route>
+          <Route component={NotFound} />
+        </Switch>
+      </main>
       <Footer />
     </BrowserRouter>
   )

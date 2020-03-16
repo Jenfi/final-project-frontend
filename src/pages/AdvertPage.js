@@ -23,7 +23,7 @@ export const AdvertPage = () => {
   }, [AD_URL])
 
   return (
-    <main>
+    <>
       {loading && <h2>Loading</h2>}
       {!loading && (
         <article className="product">
@@ -59,7 +59,8 @@ export const AdvertPage = () => {
           </section>
           <p className="publishing-details">Posted: {advert.publishedDate}</p>
         </article>
-      )}
-    </main>
+      )
+      }
+    </>
   )
 }

@@ -44,91 +44,89 @@ export const AdvertCreationPage = () => {
   }
 
   return (
-    <main>
-      <Form onSubmit={handleFormSubmit}>
-        <h2 className="page-title">Create ad</h2>
-        <Input
-          label="Title"
-          type="text"
-          id="adTitle"
-          onChange={(event) => setAdTitle(event.target.value)}
-          value={adTitle} />
-        <label htmlFor="fileInput">
-          Product image
+    <Form onSubmit={handleFormSubmit}>
+      <h2 className="page-title">Create ad</h2>
+      <Input
+        label="Title"
+        type="text"
+        id="adTitle"
+        onChange={(event) => setAdTitle(event.target.value)}
+        value={adTitle} />
+      <label htmlFor="fileInput">
+        Product image
           <input type="file" ref={fileInput} id="fileInput" />
-        </label>
-        <Select
-          label="Category"
-          id="adCategory"
-          value={adCategory}
-          onChange={(event) => setAdCategory(event.target.value)}>
-          <SelectOption
-            value="Textiles"
-            option="Textiles" />
-          <SelectOption
-            value="Lightning"
-            option="Lightning" />
-          <SelectOption
-            value="Decoration"
-            option="Decoration" />
-          <SelectOption
-            value="Rugs"
-            option="Rugs" />
-          <SelectOption
-            value="Furniture"
-            option="Furniture" />
-        </Select>
-        <Select
-          label="Condition"
-          id="adCondition"
-          value={adCondition}
-          onChange={(event) => setAdCondition(event.target.value)}>
-          <SelectOption
-            value="As new"
-            option="As new" />
-          <SelectOption
-            value="Good"
-            option="Good" />
-          <SelectOption
-            value="Used"
-            option="Used" />
-          <SelectOption
-            value="Needs alterations"
-            option="Needs alterations" />
-        </Select>
+      </label>
+      <Select
+        label="Category"
+        id="adCategory"
+        value={adCategory}
+        onChange={(event) => setAdCategory(event.target.value)}>
+        <SelectOption
+          value="Textiles"
+          option="Textiles" />
+        <SelectOption
+          value="Lightning"
+          option="Lightning" />
+        <SelectOption
+          value="Decoration"
+          option="Decoration" />
+        <SelectOption
+          value="Rugs"
+          option="Rugs" />
+        <SelectOption
+          value="Furniture"
+          option="Furniture" />
+      </Select>
+      <Select
+        label="Condition"
+        id="adCondition"
+        value={adCondition}
+        onChange={(event) => setAdCondition(event.target.value)}>
+        <SelectOption
+          value="As new"
+          option="As new" />
+        <SelectOption
+          value="Good"
+          option="Good" />
+        <SelectOption
+          value="Used"
+          option="Used" />
+        <SelectOption
+          value="Needs alterations"
+          option="Needs alterations" />
+      </Select>
 
-        <Textarea
-          label="Description"
-          id={adDescription}
-          value={adDescription}
-          onChange={(event) => setAdDescription(event.target.value)}
-          rows="10" />
+      <Textarea
+        label="Description"
+        id={adDescription}
+        value={adDescription}
+        onChange={(event) => setAdDescription(event.target.value)}
+        rows="10" />
 
-        <Input
-          label="Price"
-          type="text"
-          id="adPrice"
-          onChange={(event) => setAdPrice(event.target.value)}
-          value={adPrice} />
+      <Input
+        label="Price"
+        type="text"
+        id="adPrice"
+        onChange={(event) => setAdPrice(event.target.value)}
+        value={adPrice} />
 
-        <Select
-          label="Delivery"
-          id="adDelivery"
-          value={adDelivery}
-          onChange={(event) => setAdDelivery(event.target.value)}>
-          <SelectOption
-            value="Pick up"
-            option="Pick up" />
-          <SelectOption
-            value="Meet up"
-            option="Meet up" />
-          <SelectOption
-            value="Ship"
-            option="Ship" />
-        </Select>
+      <Select
+        label="Delivery"
+        id="adDelivery"
+        value={adDelivery}
+        onChange={(event) => setAdDelivery(event.target.value)}>
+        <SelectOption
+          value="Pick up"
+          option="Pick up" />
+        <SelectOption
+          value="Meet up"
+          option="Meet up" />
+        <SelectOption
+          value="Ship"
+          option="Ship" />
+      </Select>
 
-        <button type="submit">Save ad</button>
-      </Form>
-    </main>
+      <button type="submit">Save ad</button>
+    </Form>
   )
 }

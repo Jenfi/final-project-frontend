@@ -26,19 +26,13 @@ export const AdvertsListPage = () => {
       })
   }, [])
 
-  if (isLoading === true) {
-    return (
-      <Spinner />
-    )
-  }
-
   return (
-    <main>
-      <h2 className="ad-listing-header">All adds</h2>
+    <>
+      <h2 className="ad-listing-header">All ads</h2>
       <CardList className="ad-listing">
         {ads.map((ad) => (
           <Card className="ad-card" key={ad._id}>
-            <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />
+            {isLoading ? <Spinner /> : <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />}
             <Heading level="3" className="ad-title">
               <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
             </Heading>
@@ -46,6 +40,6 @@ export const AdvertsListPage = () => {
           </Card>
         ))}
       </CardList>
-    </main>
+    </>
   )
 }
