@@ -8,6 +8,7 @@ import { CardLink } from '../components/card/CardLink'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
 import { Hero } from '../components/Hero'
+import { Spinner } from '../components/Spinner'
 import '../styling/homepage.css'
 import '../styling/adListing.css'
 
@@ -18,11 +19,16 @@ import '../styling/adListing.css'
 
 export const HomePage = () => {
   const [ads, setAds] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
   const ADS_URL = 'http://localhost:8080/adverts'
 
   useEffect(() => {
+    setIsLoading(true)
     fetchData(ADS_URL)
-      .then((adsData) => { setAds(adsData) })
+      .then((adsData) => {
+        setAds(adsData)
+        setIsLoading(false)
+      })
   }, [])
 
   return (
@@ -34,7 +40,7 @@ export const HomePage = () => {
         <CardList className="ad-listing">
           {ads.map((ad) => (
             <Card className="ad-card" key={ad._id}>
-              <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />
+              {isLoading ? <Spinner /> : <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />}
               <Heading level="3" className="ad-title">
                 <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
               </Heading>

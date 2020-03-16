@@ -6,7 +6,7 @@ import { CardImage } from '../components/card/CardImage'
 import { CardLink } from '../components/card/CardLink'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
-import { Spinner } from './Spinner'
+import { Spinner } from '../components/Spinner'
 
 /* Här vill vi ha alla annonser listade, (eventuellt select katergori checkbox?)
 radio? samt en home/return-knapp */
