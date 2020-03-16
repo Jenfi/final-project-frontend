@@ -10,22 +10,12 @@ import '../styling/advertCreation.css'
 // här vill vi lägga till add-formuläret
 // (titel, beskrivning, pris, bild, condition, frakt, kategori, kontakt)
 
-/* 
-Response from uploaded image
-name: "trycatchflow.PNG"
-lastModified: 1581449297149
-lastModifiedDate: Tue Feb 11 2020 20:28:17 GMT+0100 (centraleuropeisk normaltid) {}
-webkitRelativePath: ""
-size: 26023
-type: "image/png"
-*/
-const API_URL = "http://localhost:8080/adverts"
+const API_URL = 'http://localhost:8080/adverts'
 
 export const AdvertCreationPage = () => {
   const [adTitle, setAdTitle] = useState('')
   const [adDescription, setAdDescription] = useState('')
   const [adPrice, setAdPrice] = useState(0)
-  const [adImage, setAdImage] = useState(null)
   const [adCondition, setAdCondition] = useState('')
   const [adDelivery, setAdDelivery] = useState('')
   const [adCategory, setAdCategory] = useState('')
@@ -33,18 +23,25 @@ export const AdvertCreationPage = () => {
   const fileInput = useRef()
 
   const handleFormSubmit = (event) => {
-    event.preventDeafult()
+    event.preventDefault()
+    console.log(fileInput.current.files[0])
     const formData = new FormData()
     formData.append('image', fileInput.current.files[0])
-    formData.append('adTitle', adTitle)
-
+    formData.append('title', adTitle)
+    formData.append('description', adDescription)
+    formData.append('price', adPrice)
+    formData.append('delivery', adDelivery)
+    formData.append('category', adCategory)
+    formData.append('condition', adCondition)
+    // seller id is from my local db
+    formData.append('seller', '5e616bad90ef293bf06ac320')
+    console.log(formData)
     fetch(API_URL, { method: 'POST', body: formData })
       .then((res) => res.json())
       .then((json) => {
         console.log(json)
       })
   }
-
 
   return (
     <main>
@@ -56,14 +53,10 @@ export const AdvertCreationPage = () => {
           id="adTitle"
           onChange={(event) => setAdTitle(event.target.value)}
           value={adTitle} />
-        <Input
-          label="Image"
-          type="file"
-          ref={fileInput}
-          id="adImage"
-          onChange={(event) => setAdImage(event.target.files[0])} />
-        {adImage && (adImage.name)}
-
+        <label htmlFor="fileInput">
+          Product image
+          <input type="file" ref={fileInput} id="fileInput" />
+        </label>
         <Select
           label="Category"
           id="adCategory"
@@ -85,7 +78,6 @@ export const AdvertCreationPage = () => {
             value="Furniture"
             option="Furniture" />
         </Select>
-
         <Select
           label="Condition"
           id="adCondition"
@@ -135,7 +127,7 @@ export const AdvertCreationPage = () => {
             option="Ship" />
         </Select>
 
-        <Button text="Save ad" />
+        <button type="submit">Save ad</button>
       </Form>
     </main>
   )

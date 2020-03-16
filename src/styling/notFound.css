@@ -1,0 +1,35 @@
+.not-found-page-title {
+    font-size: 45px;
+    color: red;
+    font-family: 'Arsenal';
+}
+
+.not-found-info-text {
+    font-size: 27px;
+    margin: 30px;
+    font-family: 'Arsenal';
+}
+
+.back-to-homepage {
+    font-size: 23px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    font-family: 'Arsenal';
+    text-decoration: none;
+}
+
+.error-message-container {
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 668px) {
+    .error-message-container {
+      max-width: 600px;
+    }
+}
