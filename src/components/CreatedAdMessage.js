@@ -2,7 +2,7 @@ import React from 'react'
 import '../styling/createdAdMessage.css'
 import { Link } from 'react-router-dom'
 
-export const createdAdMessage = () => {
+export const CreatedAdMessage = () => {
     return (
         <article className="created-ad-container">
             <h1 className="ad-created-message-title">Nice!</h1>
