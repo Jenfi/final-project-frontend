@@ -2,7 +2,7 @@ import React from 'react'
 import '../styling/createdUserMessage.css'
 import { Link } from 'react-router-dom'
 
-export const createdUserMessage = () => {
+export const CreatedUserMessage = () => {
     return (
         <article className="created-user-container">
             <h1 className="created-user-title">Welcome!</h1>

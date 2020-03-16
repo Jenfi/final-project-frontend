@@ -21,7 +21,7 @@ export const App = () => {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route exact path="/registration">
+          <Route exact path="/register">
             <Registration />
           </Route>
           <Route exact path="/sign-in">

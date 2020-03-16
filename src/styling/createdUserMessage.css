@@ -11,13 +11,20 @@
 }
 
 .to-sign-in {
-    font-size: 23px;
+   /*  font-size: 23px;
     color: black;
     border: 1px solid black;
     border-radius: 5px;
     padding: 4px;
     font-family: 'Arsenal';
-    text-decoration: none;
+    text-decoration: none; */
+        align-self: flex-end;
+        background-color: #000;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        text-decoration: none;
 }
 
 .created-user-container {

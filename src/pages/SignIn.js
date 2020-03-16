@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
-import '../styling/signInForm.css'
+import '../styling/form.css'
 
 export const SignIn = () => {
   const [userInput, setUserInput] = useState({})
@@ -53,6 +54,7 @@ export const SignIn = () => {
         id="userPassword"
         onChange={handleInputChange} />
       <Button text="Sign in" />
+      <p className="change-form">Not a member? <Link to="/register">Register</Link></p>
     </Form>
   )
 }

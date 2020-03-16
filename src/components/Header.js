@@ -9,7 +9,7 @@ export const Header = () => {
       <div className="user-container">
         {/* if signed in render <icon> <p>{user.name}</p> */}
         <Link to="/sign-in" className="sign-in-link">Sign in</Link>
-        <Link to="/registration" className="registration-link">Register</Link>
+        <Link to="/register" className="registration-link">Register</Link>
       </div>
     </header>
   )

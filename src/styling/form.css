@@ -1,14 +1,22 @@
+.sign-in-form,
 .register-form {
   padding: 2rem 1rem;
   max-width: 500px;
 }
 
+.sign-in-heading,
 .register-heading {
   margin-bottom: 1rem;
   text-align: center;
 }
 
+.change-form {
+  margin-top: 20px;
+  text-align: right;
+}
+
 @media screen and (min-width: 668px) {
+  .sign-in-form,
   .register-form {
     padding: 4rem;
   }
