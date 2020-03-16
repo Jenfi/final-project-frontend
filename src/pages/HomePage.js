@@ -9,7 +9,7 @@ import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
 import { Hero } from '../components/Hero'
 import { Spinner } from '../components/Spinner'
-import '../styling/homepage.css'
+import '../styling/hero.css'
 import '../styling/adListing.css'
 
 
@@ -44,12 +44,12 @@ export const HomePage = () => {
               <Heading level="3" className="ad-title">
                 <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
               </Heading>
-              <Text className="price-tag">{ad.price}</Text>
+              <Text className="price-tag">{ad.price} SEK</Text>
             </Card>
           ))}
         </CardList>
         <p className="ads-navigation">
-          <Link to="/adverts">All ads</Link>
+          <Link to="/adverts">All ads <i className="arrow-right" aria-hidden="true"></i></Link>
         </p>
       </section>
     </>

@@ -27,7 +27,7 @@ export const AdvertPage = () => {
     <article className="product">
       {isLoading ? <Spinner /> : <img className="product-image" src={advert.imageUrl} alt={advert.title} />}
       <h2 className="product-name">{advert.title}</h2>
-      <p className="product-price">{advert.price} kr</p>
+      <p className="product-price">{advert.price} SEK</p>
       <section className="product-description product-section">
         <h3 className="product-section-heading">Description</h3>
         <p>

@@ -36,7 +36,7 @@ export const AdvertsListPage = () => {
             <Heading level="3" className="ad-title">
               <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
             </Heading>
-            <Text className="price-tag">{ad.price}</Text>
+            <Text className="price-tag">{ad.price} SEK</Text>
           </Card>
         ))}
       </CardList>
