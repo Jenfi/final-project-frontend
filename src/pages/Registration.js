@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
-import { Link } from 'react-router-dom'
 import { CreatedUserMessage } from '../components/CreatedUserMessage'
 import '../styling/form.css'
 
