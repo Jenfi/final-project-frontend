@@ -5,7 +5,7 @@ import { Textarea } from '../components/form/Textarea'
 import { Select } from '../components/form/Select'
 import { SelectOption } from '../components/form/SelectOption'
 import { Button } from '../components/form/Button'
-import '../styling/advertCreation.css'
+import '../styling/form.css'
 
 // här vill vi lägga till add-formuläret
 // (titel, beskrivning, pris, bild, condition, frakt, kategori, kontakt)
@@ -44,8 +44,8 @@ export const AdvertCreationPage = () => {
   }
 
   return (
-    <Form onSubmit={handleFormSubmit}>
-      <h2 className="page-title">Create ad</h2>
+    <Form onSubmit={handleFormSubmit} className="ad-form">
+      <h2 className="ad-form-heading">Create ad</h2>
       <Input
         label="Title"
         type="text"

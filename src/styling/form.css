@@ -1,9 +1,34 @@
+.ad-form,
 .sign-in-form,
 .register-form {
+  background-color: #faf9f8;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 2rem auto;
   padding: 2rem 1rem;
   max-width: 500px;
+  width: 100%;
 }
 
+label {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d0d0d0;
+  border-radius: 0.2rem;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.ad-form-heading,
 .sign-in-heading,
 .register-heading {
   margin-bottom: 1rem;
@@ -14,8 +39,30 @@
   margin-top: 20px;
   text-align: right;
 }
+.success{
+  background-color: #faf9f8;
+  margin: 1rem auto 2rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+button {
+  align-self: flex-end;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 2rem
+}
 
 @media screen and (min-width: 668px) {
+  .success {
+    padding: 4rem;
+    max-width: 660px;
+  }
+
+  .ad-form,
   .sign-in-form,
   .register-form {
     padding: 4rem;
