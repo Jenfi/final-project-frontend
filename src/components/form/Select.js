@@ -3,11 +3,12 @@ import React from 'react'
 export const Select = (props) => {
   return (
     <label htmlFor={props.id}>
-      {props.label}
+      <span className={props.className}>{props.label}</span>
       <select
         onChange={props.onChange}
         value={props.value}
-        id={props.id}>
+        id={props.id}
+        required={props.required}>
         {props.children}
       </select>
     </label>

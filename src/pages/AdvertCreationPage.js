@@ -15,6 +15,7 @@ const API_URL = 'http://localhost:8080/adverts'
 
 export const AdvertCreationPage = () => {
   const [successfulCreation, setSuccessfulCreation] = useState(false)
+  const [adId, setAdId] = useState('')
   const [adTitle, setAdTitle] = useState('')
   const [adDescription, setAdDescription] = useState('')
   const [adPrice, setAdPrice] = useState(0)
@@ -42,13 +43,18 @@ export const AdvertCreationPage = () => {
       .then((res) => res.json())
       .then((json) => {
         json.created ? setSuccessfulCreation(true) : setSuccessfulCreation(false)
+
+        if (json.adId) {
+          setAdId(json.adId)
+        }
+
         console.log(json)
       })
   }
 
   return (
     <>
-      {successfulCreation && <CreatedAdMessage />}
+      {successfulCreation && <CreatedAdMessage adId={adId} />}
       {!successfulCreation && (
         <Form onSubmit={handleFormSubmit} className="ad-form">
           <h2 className="ad-form-heading">Create ad</h2>
@@ -57,16 +63,24 @@ export const AdvertCreationPage = () => {
             type="text"
             id="adTitle"
             onChange={(event) => setAdTitle(event.target.value)}
-            value={adTitle} />
+            value={adTitle}
+            required="required"
+            className="required-input" />
           <label htmlFor="fileInput">
-            Product image
-          <input type="file" ref={fileInput} id="fileInput" />
+            <span className="required-input">Product image</span>
+            <input type="file" ref={fileInput} id="fileInput" />
           </label>
           <Select
             label="Category"
             id="adCategory"
             value={adCategory}
-            onChange={(event) => setAdCategory(event.target.value)}>
+            onChange={(event) => setAdCategory(event.target.value)}
+            required="required"
+            className="required-input">
+            <SelectOption
+              value=""
+              option="Select a product category"
+              disabled="disabled" />
             <SelectOption
               value="Textiles"
               option="Textiles" />
@@ -87,7 +101,13 @@ export const AdvertCreationPage = () => {
             label="Condition"
             id="adCondition"
             value={adCondition}
-            onChange={(event) => setAdCondition(event.target.value)}>
+            onChange={(event) => setAdCondition(event.target.value)}
+            required="required"
+            className="required-input">
+            <SelectOption
+              value=""
+              option="Select a condition"
+              disabled="disabled" />
             <SelectOption
               value="As new"
               option="As new" />
@@ -103,24 +123,34 @@ export const AdvertCreationPage = () => {
           </Select>
 
           <Textarea
-            label="Description"
+            label="Description, max 400 characters"
             id={adDescription}
             value={adDescription}
             onChange={(event) => setAdDescription(event.target.value)}
-            rows="10" />
+            rows="10"
+            required="required"
+            className="required-input" />
 
           <Input
             label="Price"
             type="text"
             id="adPrice"
             onChange={(event) => setAdPrice(event.target.value)}
-            value={adPrice} />
+            value={adPrice}
+            required="required"
+            className="required-input" />
 
           <Select
             label="Delivery"
             id="adDelivery"
             value={adDelivery}
-            onChange={(event) => setAdDelivery(event.target.value)}>
+            onChange={(event) => setAdDelivery(event.target.value)}
+            required="required"
+            className="required-input">
+            <SelectOption
+              value=""
+              option="Select delivery"
+              disabled="disabled" />
             <SelectOption
               value="Pick up"
               option="Pick up" />
