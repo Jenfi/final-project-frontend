@@ -10,6 +10,7 @@ import { SignInPage } from './pages/SignInPage'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { NotFoundPage } from './pages/NotFoundPage'
+import { PrivateRoute } from './components/PrivateRoute'
 import './styling/app.css'
 
 export const App = () => {
@@ -23,8 +24,8 @@ export const App = () => {
           <Route exact path="/sign-in" component={SignInPage} />
           <Route exact path="/adverts" component={AdvertsListPage} />
           <Route exact path="/adverts/:advertId" component={AdvertPage} />
-          <Route exact path="/create-ad" component={AdvertCreationPage} />
-          <Route exact path="/profile" component={ProfilePage} />
+          <PrivateRoute exact path="/create-ad" component={AdvertCreationPage} />
+          <PrivateRoute exact path="/profile" component={ProfilePage} />
           <Route component={NotFoundPage} />
         </Switch>
       </main>
