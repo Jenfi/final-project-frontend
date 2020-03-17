@@ -45,19 +45,25 @@ export const RegisterPage = () => {
               type="text"
               id="userName"
               name="name"
-              onChange={handleInputChange} />
+              onChange={handleInputChange}
+              className="required-input"
+              required="required" />
             <Input
               label="Email"
               type="email"
               id="userEmail"
               onChange={handleInputChange}
-              name="email" />
+              name="email"
+              className="required-input"
+              required="required" />
             <Input
-              label="Password"
+              label="Password (minimum 8 characters)"
               type="password"
               id="userPassword"
               onChange={handleInputChange}
-              name="password" />
+              name="password"
+              className="required-input"
+              required="required" />
             <Button text="Register" />
             <p className="change-form">Already a member? <Link to="/sign-in">Sign in</Link></p>
           </Form>
