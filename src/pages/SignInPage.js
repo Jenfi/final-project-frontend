@@ -28,6 +28,7 @@ export const SignInPage = (props) => {
           console.log('Username or password is invalid')
         } else {
           window.localStorage.setItem('accessToken', user.accessToken)
+          window.localStorage.setItem('id', user.userId)
           console.log('User signed in')
           props.history.push('/profile')
         }
