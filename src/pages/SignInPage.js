@@ -5,7 +5,7 @@ import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
 import '../styling/form.css'
 
-export const SignInPage = () => {
+export const SignInPage = (props) => {
   const [userInput, setUserInput] = useState({})
   const AUTH_URL = 'http://localhost:8080/sessions'
 
@@ -29,6 +29,7 @@ export const SignInPage = () => {
         } else {
           window.localStorage.setItem('accessToken', user.accessToken)
           console.log('User signed in')
+          props.history.push('/profile')
         }
       })
   }

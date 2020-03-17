@@ -18,27 +18,13 @@ export const App = () => {
       <Header />
       <main>
         <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/register">
-            <RegisterPage />
-          </Route>
-          <Route exact path="/sign-in">
-            <SignInPage />
-          </Route>
-          <Route exact path="/adverts">
-            <AdvertsListPage />
-          </Route>
-          <Route exact path="/adverts/:advertId">
-            <AdvertPage />
-          </Route>
-          <Route exact path="/create-ad">
-            <AdvertCreationPage />
-          </Route>
-          <Route exact path="/profile">
-            <ProfilePage />
-          </Route>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/register" component={RegisterPage} />
+          <Route exact path="/sign-in" component={SignInPage} />
+          <Route exact path="/adverts" component={AdvertsListPage} />
+          <Route exact path="/adverts/:advertId" component={AdvertPage} />
+          <Route exact path="/create-ad" component={AdvertCreationPage} />
+          <Route exact path="/profile" component={ProfilePage} />
           <Route component={NotFoundPage} />
         </Switch>
       </main>
