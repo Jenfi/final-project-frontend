@@ -18,7 +18,7 @@
     padding: 4px;
     font-family: 'Arsenal';
     text-decoration: none; */
-        align-self: flex-end;
+        /* align-self: flex-end; */
         background-color: #000;
         border: none;
         color: #fff;
@@ -28,15 +28,19 @@
 }
 
 .created-user-container {
-    margin: 1rem auto 2rem auto;
-    padding: 1rem;
-    max-width: 300px;
+    background-color: #faf9f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 8rem auto 2rem auto;
+    padding: 2rem 1rem;
+    max-width: 500px;
     width: 100%;
-    text-align: center;
 }
 
 @media screen and (min-width: 668px) {
-    .created-ad-container {
-      max-width: 600px;
+    .created-user-container {
+      /* max-width: 600px; */
     }
 }

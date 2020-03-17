@@ -39,13 +39,6 @@ textarea {
   margin-top: 20px;
   text-align: right;
 }
-.success{
-  background-color: #faf9f8;
-  margin: 1rem auto 2rem auto;
-  padding: 2rem 1rem;
-  text-align: center;
-  max-width: 500px;
-}
 
 button {
   align-self: flex-end;
@@ -57,11 +50,6 @@ button {
 }
 
 @media screen and (min-width: 668px) {
-  .success {
-    padding: 4rem;
-    max-width: 660px;
-  }
-
   .ad-form,
   .sign-in-form,
   .register-form {
