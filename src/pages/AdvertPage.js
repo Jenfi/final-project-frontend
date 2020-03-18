@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { fetchData } from '../services/api'
 import { Spinner } from '../components/Spinner'
 import '../styling/advertPage.css'
+import moment from 'moment'
 
 // Här vill vi ha en bild, pris, namn på vara, beskrivning av vara,
 // information om säljare, publiceringsdatum, leveransinfo (katergori), condition, bread crumbs
@@ -23,39 +24,37 @@ export const AdvertPage = () => {
       })
   }, [AD_URL])
 
+  console.log(advert)
+
   return (
-    <article className="product">
-      {isLoading ? <Spinner /> : <img className="product-image" src={advert.imageUrl} alt={advert.title} />}
-      <h2 className="product-name">{advert.title}</h2>
-      <p className="product-price">{advert.price} SEK</p>
-      <section className="product-description product-section">
-        <h3 className="product-section-heading">Description</h3>
-        <p>
-          {advert.description}
-        </p>
-      </section>
-      <section className="product-details product-section">
-        <h3 className="product-section-heading">Product details</h3>
-        <ul className="product-details-list">
-          <li><span className="product-attribute">Category:</span> {advert.category}</li>
-          <li><span className="product-attribute">Color:</span> Orange</li>
-          <li><span className="product-attribute">Condition:</span> {advert.condition}</li>
-        </ul>
-      </section>
-      <section className="product-buying-details product-section">
-        <h3 className="product-section-heading">Buying and shipping</h3>
-        <ul className="product-details-list">
-          <li><span className="product-attribute">Payment:</span> </li>
-          <li><span className="product-attribute">Delivery:</span> {advert.delivery}</li>
-          <li><span className="product-attribute">Location:</span> Stockholm</li>
-        </ul>
-      </section>
-      <section className="product-seller-details product-section">
-        <h3 className="product-section-heading">Sold by</h3>
-        <p className="seller">Seller id: {advert.seller}</p>
-        <button type="button">Contact seller</button>
-      </section>
-      <p className="publishing-details">Posted: {advert.publishedDate}</p>
-    </article>
+    <>
+      {!isLoading && (
+        <article className="product">
+          {isLoading ? <Spinner /> : <img className="product-image" src={advert.product.imageUrl} alt={advert.product.title} />}
+          <h2 className="product-name">{advert.product.title}</h2>
+          <p className="product-price">{advert.product.price} SEK</p>
+          <section className="product-description product-section">
+            <h3 className="product-section-heading">Product details</h3>
+            <p>
+              {advert.product.description}
+            </p>
+            <ul className="product-details-list">
+              <li><span className="product-attribute">Condition:</span> {advert.product.condition}</li>
+              <li><span className="product-attribute">Category:</span> {advert.product.category}</li>
+            </ul>
+          </section>
+          <section className="product-buying-details product-section">
+            <h3 className="product-section-heading">Buying and shipping</h3>
+            <ul className="product-details-list">
+              <li><span className="product-attribute">Delivery:</span> {advert.product.delivery}</li>
+              <li><span className="product-attribute">Seller:</span> {advert.seller.name}</li>
+            </ul>
+            <a href={`mailto:${advert.seller.email}?subject=I want buy your product: ${advert.product.title} (${advert.product._id})`}>Contact seller</a>
+          </section>
+          <p className="publishing-details">{`Posted: ${moment(advert.product.publishedDate).format("dddd, MMMM Do YYYY, H:mm ")}`}</p>
+        </article>
+      )}
+
+    </>
   )
 }
