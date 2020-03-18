@@ -8,6 +8,7 @@ import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
 import '../styling/profilepage.css'
 import userlogo from '../assets/images/userlogo.png'
+import { Spinner } from 'components/Spinner'
 
 // här vill vi visa kontaktinfo samt aktiva annonser (kunna ändra annons?)
 // Hälsa på den inoggades namn 
@@ -45,14 +46,16 @@ export const ProfilePage = () => {
           </div>
           <section className="my-ads">
             <h2 className="ad-listing-header">My ads</h2>
-
             <CardList className="ad-listing">
-              <Card className="ad-card">
-                <Heading level="3" className="ad-title">
-                  <CardLink to={`/adverts/ad`}>Title</CardLink>
-                </Heading>
-                <Text className="price-tag">000 SEK</Text>
-              </Card>
+              {userProfile.adverts.map((ad) => (
+                <Card className="ad-card" key={ad._id}>
+                  {isLoading ? <Spinner /> : <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />}
+                  <Heading level="3" className="ad-title">
+                    <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
+                  </Heading>
+                  <Text className="price-tag">{ad.price} SEK</Text>
+                </Card>
+              ))}
             </CardList>
           </section>
         </>
