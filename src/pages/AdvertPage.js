@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import moment from 'moment'
 import { fetchData } from '../services/api'
 import { Spinner } from '../components/Spinner'
 import '../styling/advertPage.css'
-import moment from 'moment'
+import { ReactComponent as Mail } from '../assets/images/mail.svg'
 
 // Här vill vi ha en bild, pris, namn på vara, beskrivning av vara,
 // information om säljare, publiceringsdatum, leveransinfo (katergori), condition, bread crumbs
@@ -49,7 +50,7 @@ export const AdvertPage = () => {
               <li><span className="product-attribute">Delivery:</span> {advert.product.delivery}</li>
               <li><span className="product-attribute">Seller:</span> {advert.seller.name}</li>
             </ul>
-            <a href={`mailto:${advert.seller.email}?subject=I want buy your product: ${advert.product.title} (${advert.product._id})`}>Contact seller</a>
+            <a className="contact-seller" href={`mailto:${advert.seller.email}?subject=I want buy your product: ${advert.product.title} (${advert.product._id})`}><Mail />Contact seller</a>
           </section>
           <p className="publishing-details">{`Posted: ${moment(advert.product.publishedDate).format("dddd, MMMM Do YYYY, H:mm ")}`}</p>
         </article>
