@@ -16,33 +16,19 @@ import userlogo from '../assets/images/userlogo.png'
 export const ProfilePage = () => {
   const [userProfile, setUserProfile] = useState()
   const [isLoading, setIsLoading] = useState(false)
-  const userId = localStorage.getItem('id')
   const accessToken = localStorage.getItem('accessToken')
-  const profileUrl = `http://localhost:8080/users/${userId}/profile`
-  const headerOptions = { 'Authorization': accessToken }
 
-  const fetchUserProfile = (url) => {
-    setIsLoading(true)
-    fetch(profileUrl, { headers: { 'Authorization': accessToken } })
-      .then((res) => res.json())
+  useEffect(() => {
+    const profileUrl = `http://localhost:8080/users/current`
+    const headerOptions = { 'Authorization': accessToken }
+
+    fetchDataWithHeaders(profileUrl, headerOptions)
       .then((profileData) => {
         setUserProfile(profileData)
         setIsLoading(false)
         console.log(profileData)
       })
-  }
-
-  useEffect(() => {
-    fetchUserProfile()
-    /*     
-    
-    fetchDataWithHeaders(profileUrl, headerOptions)
-          .then((profileData) => {
-            setUserProfile(profileData)
-            setIsLoading(false)
-            console.log(profileData)
-          }) */
-  }, [])
+  }, [accessToken])
 
   return (
     <>
