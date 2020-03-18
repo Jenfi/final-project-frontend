@@ -11,7 +11,6 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PrivateRoute } from './components/PrivateRoute'
-import './styling/app.css'
 import { CreatedAdMessage } from 'components/CreatedAdMessage'
 import { CreatedUserMessage } from 'components/CreatedUserMessage'
 

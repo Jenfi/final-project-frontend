@@ -9,6 +9,7 @@ import { Text } from '../components/card/Text'
 import '../styling/profilepage.css'
 import userlogo from '../assets/images/userlogo.png'
 import { Spinner } from 'components/Spinner'
+import { EmptyState } from 'components/EmptyState'
 
 // här vill vi visa kontaktinfo samt aktiva annonser (kunna ändra annons?)
 // Hälsa på den inoggades namn 
@@ -45,18 +46,34 @@ export const ProfilePage = () => {
             </section>
           </div>
           <section className="my-ads">
-            <h2 className="ad-listing-header">My ads</h2>
-            <CardList className="ad-listing">
-              {userProfile.adverts.map((ad) => (
-                <Card className="ad-card" key={ad._id}>
-                  {isLoading ? <Spinner /> : <CardImage className="ad-image" src={ad.imageUrl} alt={ad.title} />}
-                  <Heading level="3" className="ad-title">
-                    <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
-                  </Heading>
-                  <Text className="price-tag">{ad.price} SEK</Text>
-                </Card>
-              ))}
-            </CardList>
+            {userProfile.adverts.length === 0 && (
+              <EmptyState
+                title="You don't have any ads yet"
+                text="Why don't you create one!"
+                linkText="Create an ad"
+                url="/create-ad" />
+            )}
+            {userProfile.adverts.length > 0 && (
+              <>
+                <h2 className="ad-listing-header">My ads</h2>
+                <CardList className="ad-listing">
+                  {userProfile.adverts.map((ad) => (
+                    <Card className="ad-card" key={ad._id}>
+                      {isLoading
+                        ? <Spinner />
+                        : <CardImage
+                          className="ad-image"
+                          src={ad.imageUrl}
+                          alt={ad.title} />}
+                      <Heading level="3" className="ad-title">
+                        <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
+                      </Heading>
+                      <Text className="price-tag">{ad.price} SEK</Text>
+                    </Card>
+                  ))}
+                </CardList>
+              </>
+            )}
           </section>
         </>
       )}
