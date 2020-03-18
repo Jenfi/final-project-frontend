@@ -1,3 +1,5 @@
+/* <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
+
 .product {
   line-height: 1.6;
   margin: 2rem auto 2rem auto;
@@ -7,6 +9,9 @@
 
 .product-image {
   width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-name {
@@ -34,16 +39,39 @@
 }
 
 .product-details-list {
-  margin-left: 0;
+  margin: 12px 12px 30px 0;
 }
 
 .product-attribute {
   font-weight: 700;
 }
 
+.publishing-details{
+  font-size: 0.8rem;
+}
+
 .seller {
   margin-bottom: 1rem;
 }
+
+.contact-seller{
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.contact-seller svg{
+  width: 2rem;
+  height: auto;
+  fill: #FFF;
+  fill: #FFF;
+  vertical-align: middle;
+  margin-right: 0.8rem;
+}
+
 
 @media screen and (min-width: 25rem) {
   .product-name,
