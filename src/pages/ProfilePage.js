@@ -55,7 +55,7 @@ export const ProfilePage = () => {
             )}
             {userProfile.adverts.length > 0 && (
               <>
-                <h2 className="ad-listing-header">My ads</h2>
+                <h2 className="ad-listing-header">My ads ({userProfile.adverts.length})</h2>
                 <CardList className="ad-listing">
                   {userProfile.adverts.map((ad) => (
                     <Card className="ad-card" key={ad._id}>
