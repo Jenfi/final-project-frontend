@@ -32,15 +32,13 @@ export const ProfilePage = () => {
     <>
       {userProfile && (
         <>
-          <div className="user-profile-wrapper">
-            <div className="image-container">
-              <img className="userlogo" src={userlogo} alt="User Logo" />
+          <section className="profile-box">
+            <div className="profile-image-wrapper">
+              <img className="profile-image" src={userlogo} alt="User Logo" />
             </div>
-            <section className="profile-box">
-              <h2 className="user-greeting">{`Hi ${userProfile.name}!`}</h2>
-              <p className="user-email">{userProfile.email}</p>
-            </section>
-          </div>
+            <h2 className="profile-greeting">{`Hi ${userProfile.name}!`}</h2>
+            <p className="profile-email">{userProfile.email}</p>
+          </section>
           <section className="my-ads">
             {userProfile.adverts.length === 0 && (
               <EmptyState
