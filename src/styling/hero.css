@@ -1,14 +1,10 @@
 .hero {
-/* background-image: url('../assets/images/bluechair.jpeg'); */
-/* background-size: cover; */
-/* background-repeat: no-repeat; */
-/* height: 70vh; */
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
+  }
+  
 .hero-content {
   align-items: center;
   display: flex;
@@ -17,47 +13,48 @@
   position: absolute;
   z-index: 1;
 }
-
+  
 .hero-title {
-  color: white;
-  font-size: 2rem;
-text-align: center;
-}
-
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  }
+  
 .hero-tagline {
-  color: white;
+  color: #fff;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
-
+  
 .hero .call-to-action {
   align-self: center;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 6px;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   margin-top: 1rem;
-  padding: 1rem 1.8rem;
+  padding: 0.5rem 0.9rem;
 }
-
-.hero-strip-overlay {
-  background: black;
-  height: 200px; 
+  
+.hero-strip-overlay{
+  background: #000;
+  height: 200px;
   opacity: 50%;
   position: absolute;
+  width: 100%;
   z-index: 1;
 }
-
+  
 /* Slider */
 .auto-slider {
   height: auto;
   overflow-X:hidden;
   width: 100%;
 }
-
+  
 .auto-slider_content {
   animation-name: slide;
   animation-duration: 25s;
@@ -67,62 +64,59 @@ text-align: center;
   margin: 0;
   z-index: -2;
 }
-
+  
 .auto-slider_content img {
   height: 300px;
   z-index: -3;
 }
-
-@keyframes slide{
-  10% {
+  
+  @keyframes slide{
+  10%{
     transform: translateX(0);
   }
-
-  25% {
+  25%{
     transform: translateX(-1080px);
   }
-
-  40% {
+  40%{
     transform: translateX(-2160px);
   }
-
-  55% {
+  55%{
     transform: translateX(-3340px);
   }
-  
-  70% {
+  70%{
     transform: translateX(-2160px);
   }
-
-  85% {
+  85%{
     transform: translateX(-1080px);
   }
-  
-  90% {
+  90%{
     transform: translateX(0);
   }
-}
+  }
 
-@media screen and (min-width: 668px) {
-  .hero-title {
-    font-size: 60px;
-    text-align: center;
+  @media screen and (min-width: 41.75rem) {
+    .hero-strip-overlay{
+      height: 300px;
     }
-    
-  .hero-tagline {
-    font-size: 32px;
-  }
-    
-  .hero-strip-overlay {
-    height: 300px;
-  }
 
-  .auto-slider_content img {
-    height: 720px;
+    .hero-title {
+      font-size: 3.75rem;
+    }
+      
+    .hero-tagline {
+      font-size: 2rem;
+    }
+      
+    .hero-strip-overlay {
+      height: 300px;
+    }
+  
+    .auto-slider_content img {
+      height: 720px;
+    }
+  
+    .hero .call-to-action {
+      margin-top: 2rem;
+      padding: 1rem 1.75rem;
+    }
   }
-
-  .hero .call-to-action {
-    padding: 1rem 28px;
-    margin-top: 2rem;
-  }
-}

@@ -14,7 +14,7 @@ export const AdvertsListPage = () => {
 
   useEffect(() => {
     setIsLoading(true)
-    fetchData(process.env.REACT_APP_API_ADVERTS)
+    fetchData(`${process.env.REACT_APP_API_ADVERTS}/?limit=50`)
       .then((adsData) => {
         setAds(adsData)
         setIsLoading(false)
