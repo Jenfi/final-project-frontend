@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import vase from '../assets/images/potBIG.jpg'
 import chair from '../assets/images/chairBIG.jpg'
 import leatherSofa from '../assets/images/leather-sofaBIG.jpg'
 import stool from '../assets/images/stoolBIG.jpg'
 import lamp from '../assets/images/lampBIG.jpg'
+
 
 export const Hero = () => {
 
@@ -22,7 +24,7 @@ export const Hero = () => {
       <div className="hero-content">
         <h2 className="hero-title">Furniture made easy.</h2>
         <p className="hero-tagline">We help you sell your used furniture and give them a new home.</p>
-        <button type="button" className="CTA-button">Start selling</button>
+        <Link className="call-to-action" to="/create-ad">Start selling</Link>
       </div>
     </section>
   )

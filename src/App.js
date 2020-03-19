@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { AdvertPage } from './pages/AdvertPage'
 import { AdvertsListPage } from './pages/AdvertsListPage'
@@ -15,16 +15,27 @@ import { CreatedAdMessage } from 'components/CreatedAdMessage'
 import { CreatedUserMessage } from 'components/CreatedUserMessage'
 
 export const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('accessToken') ? true : false)
+
+  const setLogInState = () => {
+    if (localStorage.getItem('accessToken')) {
+      setIsLoggedIn(true)
+    } else {
+      setIsLoggedIn(false)
+    }
+  }
+
+  console.log(isLoggedIn)
   return (
     <BrowserRouter>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} setLogInState={setLogInState} />
       <main>
         <Switch>
-          <Route exact path="/created-ad" component={CreatedAdMessage} />
-          <Route exact path="/created-user" component={CreatedUserMessage} />
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/register" component={RegisterPage} />
-          <Route exact path="/sign-in" component={SignInPage} />
+          <Route exact path="/register"
+            render={(props) => isLoggedIn ? <Redirect to="/profile" /> : <RegisterPage />} />
+          <Route exact path="/sign-in"
+            render={(props) => isLoggedIn ? <Redirect to="/profile" /> : <SignInPage {...props} setLogInState={setLogInState} />} />
           <Route exact path="/adverts" component={AdvertsListPage} />
           <Route exact path="/adverts/:advertId" component={AdvertPage} />
           <PrivateRoute exact path="/create-ad" component={AdvertCreationPage} />
