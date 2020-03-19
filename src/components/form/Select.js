@@ -11,6 +11,7 @@ export const Select = (props) => {
         required={props.required}>
         {props.children}
       </select>
+      <span className="requirements">{props.requirements}</span>
     </label>
   )
 }

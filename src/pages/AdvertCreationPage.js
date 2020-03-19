@@ -1,15 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { CreatedAdMessage } from '../components/CreatedAdMessage'
 import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
-import { Textarea } from '../components/form/Textarea'
 import { Select } from '../components/form/Select'
 import { SelectOption } from '../components/form/SelectOption'
-import { Button } from '../components/form/Button'
-import { CreatedAdMessage } from '../components/CreatedAdMessage'
+import { Textarea } from '../components/form/Textarea'
 import '../styling/form.css'
 
-// här vill vi lägga till add-formuläret
-// (titel, beskrivning, pris, bild, condition, frakt, kategori, kontakt)
 
 const API_URL = 'http://localhost:8080/adverts'
 
@@ -59,112 +56,134 @@ export const AdvertCreationPage = () => {
         <Form onSubmit={handleFormSubmit} className="ad-form">
           <h2 className="ad-form-heading">Create ad</h2>
           <Input
-            label="Title"
-            type="text"
+            className="required-input"
             id="adTitle"
+            label="Title"
+            minLength="3"
+            maxLength="50"
             onChange={(event) => setAdTitle(event.target.value)}
+            type="text"
             value={adTitle}
             required="required"
-            className="required-input" />
+            requirements="Title must be 3–50 characters long." />
           <label htmlFor="fileInput">
             <span className="required-input">Product image</span>
-            <input type="file" ref={fileInput} id="fileInput" />
+            <input
+              accept="image/png, image/jpeg, image/jpg"
+              id="fileInput"
+              ref={fileInput}
+              required
+              type="file"
+            />
+            <span className="requirements">Ads must have an image.</span>
           </label>
           <Select
-            label="Category"
+            className="required-input"
             id="adCategory"
-            value={adCategory}
+            label="Category"
             onChange={(event) => setAdCategory(event.target.value)}
             required="required"
-            className="required-input">
+            requirements="Select a category from the list"
+            value={adCategory} >
             <SelectOption
-              value=""
+              disabled="disabled"
               option="Select a product category"
-              disabled="disabled" />
+              value="" />
             <SelectOption
-              value="Textiles"
-              option="Textiles" />
+              option="Textiles"
+              value="Textiles" />
             <SelectOption
-              value="Lightning"
-              option="Lightning" />
+              option="Lightning"
+              value="Lightning" />
             <SelectOption
-              value="Decoration"
-              option="Decoration" />
+              option="Decoration"
+              value="Decoration" />
             <SelectOption
-              value="Rugs"
-              option="Rugs" />
+              option="Rugs"
+              value="Rugs" />
             <SelectOption
-              value="Furniture"
-              option="Furniture" />
+              option="Furniture"
+              value="Furniture" />
           </Select>
           <Select
-            label="Condition"
+            className="required-input"
             id="adCondition"
+            label="Condition"
             value={adCondition}
             onChange={(event) => setAdCondition(event.target.value)}
             required="required"
-            className="required-input">
+            requirements="Select the condition your product is in.">
             <SelectOption
-              value=""
+              disabled="disabled"
               option="Select a condition"
-              disabled="disabled" />
+              value="" />
             <SelectOption
-              value="As new"
-              option="As new" />
+              option="As new"
+              value="As new" />
             <SelectOption
-              value="Good"
-              option="Good" />
+              option="Good"
+              value="Good" />
             <SelectOption
-              value="Used"
-              option="Used" />
+              option="Used"
+              value="Used" />
             <SelectOption
-              value="Needs alterations"
-              option="Needs alterations" />
+              option="Needs alterations"
+              value="Needs alterations" />
           </Select>
 
           <Textarea
-            label="Description, max 400 characters"
+            className="required-input"
             id={adDescription}
+            label="Description, max 400 characters"
+            minLength="3"
+            maxLength="600"
             value={adDescription}
             onChange={(event) => setAdDescription(event.target.value)}
             rows="10"
             required="required"
-            className="required-input" />
+            requirements="Descirption must be 3–600 characters long." />
 
           <Input
-            label="Price"
-            type="text"
+            className="required-input"
             id="adPrice"
+            label="Price"
+            type="number"
+            min="1"
             onChange={(event) => setAdPrice(event.target.value)}
             value={adPrice}
             required="required"
-            className="required-input" />
+            requirements="Price must be 1 SEK or higher."
+          />
 
           <Select
-            label="Delivery"
+            className="required-input"
             id="adDelivery"
-            value={adDelivery}
+            label="Delivery"
             onChange={(event) => setAdDelivery(event.target.value)}
             required="required"
-            className="required-input">
+            requirements="Select a delivery from the list"
+            value={adDelivery}>
             <SelectOption
-              value=""
+              disabled="disabled"
               option="Select delivery"
-              disabled="disabled" />
+              value="" />
             <SelectOption
-              value="Pick up"
-              option="Pick up" />
+              option="Pick up"
+              value="Pick up" />
             <SelectOption
-              value="Meet up"
-              option="Meet up" />
+              option="Meet up"
+              value="Meet up" />
             <SelectOption
-              value="Ship"
-              option="Ship" />
+              option="Ship"
+              value="Ship" />
           </Select>
-
-          <button type="submit">Save ad</button>
+          <button
+            type="submit">
+            Save ad
+            </button>
         </Form>
-      )}
+      )
+      }
     </>
   )
 }

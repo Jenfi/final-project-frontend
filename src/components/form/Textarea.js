@@ -7,11 +7,14 @@ export const Textarea = (props) => {
         {props.label}
       </span>
       <textarea
+        id={props.id}
         rows={props.rows}
         value={props.value}
         onChange={props.onChange}
-        id={props.id}
+        minLength={props.minLength}
+        maxLength={props.maxLength}
         required={props.required} />
+      <span className="requirements">{props.requirements}</span>
     </label>
   )
 }

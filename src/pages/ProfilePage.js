@@ -41,7 +41,7 @@ export const ProfilePage = () => {
               <img className="userlogo" src={userlogo} alt="User Logo" />
             </div>
             <section className="profile-box">
-              <h2 className="user-name">{`Hi ${userProfile.name}!`}</h2>
+              <h2 className="user-greeting">{`Hi ${userProfile.name}!`}</h2>
               <p className="user-email">{userProfile.email}</p>
             </section>
           </div>

@@ -12,7 +12,11 @@ export const Input = (props) => {
         onChange={props.onChange}
         id={props.id}
         name={props.name}
+        min={props.min}
+        minLength={props.minLength}
+        maxLength={props.maxLength}
         required={props.required} />
+      <span className="requirements">{props.requirements}</span>
     </label>
   )
 }
