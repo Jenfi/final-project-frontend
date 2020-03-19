@@ -7,7 +7,7 @@ export const isAuthenticatedUser = () => {
 }
 
 export const signInUser = async (body) => {
-  const AUTH_URL = 'http://localhost:8080/sessions'
+  const AUTH_URL = process.env.REACT_APP_API_AUTH
   const options = {
     method: 'POST',
     body: JSON.stringify(body),
@@ -19,7 +19,7 @@ export const signInUser = async (body) => {
 }
 
 export const registerUser = async (body) => {
-  const REGISTER_URL = 'http://localhost:8080/users'
+  const REGISTER_URL = process.env.REACT_APP_API_USERS
   const options = {
     method: 'POST',
     body: JSON.stringify(body),

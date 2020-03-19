@@ -13,14 +13,10 @@ import '../styling/hero.css'
 import '../styling/adListing.css'
 
 
-// DET HÄR ÄR HOMEPAGE
-
-// här vill vi ha en beksrivning av sidan, menu bar, en hero-section, lista med ads, modal-box, footer, header
-
 export const HomePage = () => {
   const [ads, setAds] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  const ADS_URL = 'http://localhost:8080/adverts'
+  const ADS_URL = process.env.REACT_APP_API_ADVERTS
 
   useEffect(() => {
     setIsLoading(true)
