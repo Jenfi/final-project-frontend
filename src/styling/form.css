@@ -1,3 +1,8 @@
+/* Warning sign
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+*/
+
+
 .ad-form,
 .sign-in-form,
 .register-form {
@@ -51,6 +56,19 @@ button {
   color: #fff;
   font-size: 1rem;
   padding: 1rem 2rem
+}
+
+.error-message {
+  background: #ff6f8a78;
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.error-message svg{
+  width: 1.4rem;
+  margin-right: 0.5rem;
 }
 
 @media screen and (min-width: 668px) {

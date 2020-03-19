@@ -12,12 +12,12 @@
     text-align: center;
 }
 
-h2 {
+.user-greeting {
     font-family: 'Arsenal';
     font-size: 35px;
 }
 
-p { 
+.user-email { 
     margin-top: 10px;
 }
 

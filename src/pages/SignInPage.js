@@ -4,17 +4,19 @@ import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
 import { signInUser } from '../services/auth'
+import { ReactComponent as Alert } from '../assets/images/alert.svg'
 import '../styling/form.css'
 
 export const SignInPage = (props) => {
   const [userInput, setUserInput] = useState({})
+  const [errorMessage, setErrorMessage] = useState(false)
 
   const handleSignIn = (event) => {
     event.preventDefault()
     signInUser(userInput)
       .then((user) => {
         if (user.notFound) {
-          console.log('Username or password is invalid')
+          setErrorMessage(true)
         } else {
           window.localStorage.setItem('accessToken', user.accessToken)
           console.log('User signed in')
@@ -43,6 +45,12 @@ export const SignInPage = (props) => {
         name="password"
         id="userPassword"
         onChange={handleInputChange} />
+      {errorMessage && (
+        <div className="error-message">
+          <Alert />
+          <p className="sign-in-error">Email or password is invalid.</p>
+        </div>
+      )}
       <Button text="Sign in" />
       <p className="change-form">Not a member? <Link to="/register">Register</Link></p>
     </Form>
