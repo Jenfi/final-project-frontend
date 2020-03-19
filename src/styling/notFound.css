@@ -1,31 +1,34 @@
 .not-found-page-title {
-    font-size: 45px;
+    font-size: 38px;
     color: red;
     font-family: 'Arsenal';
 }
 
 .not-found-info-text {
-    font-size: 27px;
+    font-size: 22px;
     margin: 30px;
     font-family: 'Arsenal';
 }
 
 .back-to-homepage {
-    font-size: 23px;
-    color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 4px;
-    font-family: 'Arsenal';
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem 2rem;
     text-decoration: none;
 }
 
 .error-message-container {
-    margin: 1rem auto 2rem auto;
-    padding: 1rem;
-    max-width: 300px;
+    background-color: #faf9f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 8rem auto 2rem auto;
+    padding: 2rem 1rem;
+    max-width: 500px;
     width: 100%;
-    text-align: center;
 }
 
 @media screen and (min-width: 668px) {

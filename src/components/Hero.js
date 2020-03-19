@@ -6,18 +6,37 @@ import leatherSofa from '../assets/images/leather-sofaBIG.jpg'
 import stool from '../assets/images/stoolBIG.jpg'
 import lamp from '../assets/images/lampBIG.jpg'
 
-
 export const Hero = () => {
 
   return (
     <section className="hero">
       <div className="auto-slider">
         <ul className="auto-slider_content">
-          <li> <img className="hero-image" src={chair} alt="Chair" /></li>
-          <li> <img className="hero-image" src={vase} alt="Vase" /></li>
-          <li> <img className="hero-image" src={stool} alt="Chair and stool" /></li>
-          <li> <img className="hero-image" src={leatherSofa} alt="Sofa" /></li>
-          <li> <img className="hero-image" src={lamp} alt="Lamp" /></li>
+          <li> <img
+            className="hero-image"
+            src={chair}
+            alt="Chair" />
+          </li>
+          <li> <img
+            className="hero-image"
+            src={vase}
+            alt="Vase" />
+          </li>
+          <li> <img
+            className="hero-image"
+            src={stool}
+            alt="Chair and stool" />
+          </li>
+          <li> <img
+            className="hero-image"
+            src={leatherSofa}
+            alt="Sofa" />
+          </li>
+          <li> <img
+            className="hero-image"
+            src={lamp}
+            alt="Lamp" />
+          </li>
         </ul>
       </div>
       <div className="hero-strip-overlay"></div>

@@ -6,9 +6,6 @@ import { Spinner } from '../components/Spinner'
 import '../styling/advertPage.css'
 import { ReactComponent as Mail } from '../assets/images/mail.svg'
 
-// Här vill vi ha en bild, pris, namn på vara, beskrivning av vara,
-// information om säljare, publiceringsdatum, leveransinfo (katergori), condition, bread crumbs
-
 export const AdvertPage = () => {
   const [advert, setAdvert] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -24,8 +21,6 @@ export const AdvertPage = () => {
         setIsLoading(false)
       })
   }, [AD_URL])
-
-  console.log(advert)
 
   return (
     <>
@@ -52,7 +47,7 @@ export const AdvertPage = () => {
             </ul>
             <a className="contact-seller" href={`mailto:${advert.seller.email}?subject=I want buy your product: ${advert.product.title} (${advert.product._id})`}><Mail />Contact seller</a>
           </section>
-          <p className="publishing-details">{`Posted: ${moment(advert.product.publishedDate).format("dddd, MMMM Do YYYY, H:mm ")}`}</p>
+          <p className="publishing-details">{`Posted: ${moment(advert.product.publishedDate).format('dddd, MMMM Do YYYY, H:mm ')}`}</p>
         </article>
       )}
 

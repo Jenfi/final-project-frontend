@@ -8,9 +8,6 @@ header {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-family: 'Arsenal';
-  /* font-family: 'Suranna'; */
-  /* font-family: 'Maitree', ; */
-  /* font-family: 'Gayathri', ; */
 }
 
 .site-title {
@@ -25,17 +22,33 @@ header {
 }
 
 .user-container {
-  align-self: center;
   margin-right: 12px;
   margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-container a {
   margin: 5px;
 }
 
+.user-container svg{
+  width: 2rem;
+  fill: #FFF;
+  stroke: #FFF;
+}
 .sign-in-link,
 .registration-link {
   color: #fff;
   text-decoration: none;
+}
+
+.sign-out-button{
+  align-self: flex-end;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
 }
