@@ -4,9 +4,10 @@ import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
 import { CreatedUserMessage } from '../components/CreatedUserMessage'
+import { registerUser } from '../services/auth'
 import '../styling/form.css'
 
-export const RegisterPage = () => {
+export const RegisterPage = (props) => {
   const [userInput, setUserInput] = useState({})
   const [success, setSuccess] = useState(false)
 
@@ -15,22 +16,13 @@ export const RegisterPage = () => {
     [event.currentTarget.name]: event.currentTarget.value
   })
 
-  const registerUser = (registrationData) => {
-    fetch('http://localhost:8080/users', {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(registrationData)
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        json.error ? setSuccess(false) : setSuccess(true)
-        console.log(json)
-      })
-  }
-
   const handleRegistration = (event) => {
     event.preventDefault()
     registerUser(userInput)
+      .then((user) => {
+        user.error ? setSuccess(false) : setSuccess(true)
+        console.log(user)
+      })
   }
 
   return (

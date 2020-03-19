@@ -3,34 +3,22 @@ import { Link } from 'react-router-dom'
 import { Form } from '../components/form/Form'
 import { Input } from '../components/form/Input'
 import { Button } from '../components/form/Button'
+import { signInUser } from '../services/auth'
 import '../styling/form.css'
 
 export const SignInPage = (props) => {
   const [userInput, setUserInput] = useState({})
-  const AUTH_URL = 'http://localhost:8080/sessions'
-
-  const signInUser = async () => {
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(userInput),
-      headers: { 'Content-Type': 'application/json' }
-    }
-    const response = await fetch(AUTH_URL, options)
-    const json = await response.json()
-    return json
-  }
 
   const handleSignIn = (event) => {
     event.preventDefault()
-    signInUser()
+    signInUser(userInput)
       .then((user) => {
         if (user.notFound) {
           console.log('Username or password is invalid')
         } else {
           window.localStorage.setItem('accessToken', user.accessToken)
-          window.localStorage.setItem('id', user.userId)
           console.log('User signed in')
-          props.history.push('/profile')
+          props.setLogInState()
         }
       })
   }
