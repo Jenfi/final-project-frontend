@@ -1,16 +1,40 @@
-footer{
-  background: black;
+footer {
+  background: #000;
   color: #fff;
-  display: flex;
-  justify-content: space-evenly;
   padding: 12px;
 }
 
-ul{
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 31.25rem;
+  width: 100%;
+}
+
+.footer-section  {
+  padding: 1rem;
+}
+
+.footer-link-list {
   list-style-type: none;
-  margin: 12px;
 }
 
 .footer-header {
   font-weight: bold;
+}
+
+
+@media screen and (min-width: 41.75rem) {
+  .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 40rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .footer-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      max-width: 62.5rem;
+  }
 }
