@@ -21,7 +21,6 @@ export const RegisterPage = (props) => {
     registerUser(userInput)
       .then((user) => {
         user.error ? setSuccess(false) : setSuccess(true)
-        console.log(user)
       })
   }
 
@@ -33,31 +32,40 @@ export const RegisterPage = (props) => {
           <Form className="register-form" onSubmit={handleRegistration}>
             <h2 className="register-heading">Register</h2>
             <Input
-              label="Name"
-              type="text"
+              className="required-input"
               id="userName"
+              label="Name"
+              minLength="2"
+              maxLength="50"
               name="name"
               onChange={handleInputChange}
-              className="required-input"
-              required="required" />
+              required="required"
+              requirements="You must add your name."
+              type="text" />
             <Input
-              label="Email"
-              type="email"
+              className="required-input"
               id="userEmail"
-              onChange={handleInputChange}
+              label="Email"
+              minLength="5"
               name="email"
-              className="required-input"
-              required="required" />
-            <Input
-              label="Password (minimum 8 characters)"
-              type="password"
-              id="userPassword"
               onChange={handleInputChange}
-              name="password"
+              required="required"
+              requirements="You must add a valid email."
+              type="email" />
+            <Input
               className="required-input"
-              required="required" />
+              id="userPassword"
+              label="Password (minimum 8 characters)"
+              onChange={handleInputChange}
+              minLength="8"
+              name="password"
+              required="required"
+              requirements="Create a safe password of at least 8 characters."
+              type="password" />
             <Button text="Register" />
-            <p className="change-form">Already a member? <Link to="/sign-in">Sign in</Link></p>
+            <p className="change-form">
+              Already a member? <Link to="/sign-in">Sign in</Link>
+            </p>
           </Form>
         </>
       )}

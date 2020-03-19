@@ -134,14 +134,14 @@ export const AdvertCreationPage = () => {
           <Textarea
             className="required-input"
             id={adDescription}
-            label="Description, max 400 characters"
+            label="Description, max 600 characters"
             minLength="3"
             maxLength="600"
             value={adDescription}
             onChange={(event) => setAdDescription(event.target.value)}
             rows="10"
             required="required"
-            requirements="Descirption must be 3–600 characters long." />
+            requirements="Description must be 3–600 characters long." />
 
           <Input
             className="required-input"
