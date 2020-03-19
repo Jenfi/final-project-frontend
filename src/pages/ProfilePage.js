@@ -11,17 +11,13 @@ import userlogo from '../assets/images/userlogo.png'
 import { Spinner } from 'components/Spinner'
 import { EmptyState } from 'components/EmptyState'
 
-// här vill vi visa kontaktinfo samt aktiva annonser (kunna ändra annons?)
-// Hälsa på den inoggades namn 
-// Stretch: om vi vill lägga till favoriter vill vi kunna se dem här 
-
 export const ProfilePage = () => {
   const [userProfile, setUserProfile] = useState()
   const [isLoading, setIsLoading] = useState(false)
   const accessToken = localStorage.getItem('accessToken')
 
   useEffect(() => {
-    const profileUrl = `http://localhost:8080/users/current`
+    const profileUrl = process.env.REACT_APP_API_CURRENT_USER
     const headerOptions = { 'Authorization': accessToken }
 
     fetchDataWithHeaders(profileUrl, headerOptions)

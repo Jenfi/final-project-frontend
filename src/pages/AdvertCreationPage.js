@@ -8,7 +8,7 @@ import { Textarea } from '../components/form/Textarea'
 import '../styling/form.css'
 
 
-const API_URL = 'http://localhost:8080/adverts'
+const API_URL = process.env.REACT_APP_API_ADVERTS
 
 export const AdvertCreationPage = () => {
   const [successfulCreation, setSuccessfulCreation] = useState(false)

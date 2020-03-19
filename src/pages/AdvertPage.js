@@ -14,7 +14,7 @@ export const AdvertPage = () => {
   const [isLoading, setIsLoading] = useState(true)
   const { advertId } = useParams()
 
-  const AD_URL = `http://localhost:8080/adverts/${advertId}`
+  const AD_URL = `${process.env.REACT_APP_API_ADVERTS}/${advertId}`
 
   useEffect(() => {
     setIsLoading(true)

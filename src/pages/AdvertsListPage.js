@@ -8,18 +8,13 @@ import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
 import { Spinner } from '../components/Spinner'
 
-/* Här vill vi ha alla annonser listade, (eventuellt select katergori checkbox?)
-radio? samt en home/return-knapp */
-
 export const AdvertsListPage = () => {
   const [ads, setAds] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
-  const ADS_URL = 'http://localhost:8080/adverts'
-
   useEffect(() => {
     setIsLoading(true)
-    fetchData(ADS_URL)
+    fetchData(process.env.REACT_APP_API_ADVERTS)
       .then((adsData) => {
         setAds(adsData)
         setIsLoading(false)
