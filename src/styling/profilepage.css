@@ -1,27 +1,38 @@
-.userlogo {
-    width: 90%;
-    border-radius: 50%;
-    margin-top: 20px;
-}
-
-.user-profile-wrapper {
-    margin: 1rem auto 1rem auto;
-    padding: 1rem;
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-}
-
-.user-greeting {
-    font-family: 'Arsenal';
-    font-size: 35px;
-}
-
-.user-email { 
-    margin-top: 10px;
-}
-
 .profile-box {
-    padding: 50px;
-    margin: 10px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-image-wrapper {
+    margin: 0 auto 0.5rem auto;
+    max-width: 200px;
+    width: 70%;
+}
+
+.profile-image {
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profile-greeting {
+    font-family: 'Arsenal';
+    font-size: 2rem;
+}
+
+.profile-email { 
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 41.75rem) {
+    .profile-image-wrapper {
+        width: 100%;
+    } 
+
+    .profile-greeting {
+        font-family: 'Arsenal';
+        font-size: 2.5rem;
+    }
 }

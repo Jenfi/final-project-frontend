@@ -15,6 +15,7 @@ export const Input = (props) => {
         min={props.min}
         minLength={props.minLength}
         maxLength={props.maxLength}
+        placeholder=" "
         required={props.required} />
       <span className="requirements">{props.requirements}</span>
     </label>

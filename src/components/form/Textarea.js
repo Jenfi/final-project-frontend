@@ -13,6 +13,7 @@ export const Textarea = (props) => {
         onChange={props.onChange}
         minLength={props.minLength}
         maxLength={props.maxLength}
+        placeholder=" "
         required={props.required} />
       <span className="requirements">{props.requirements}</span>
     </label>
