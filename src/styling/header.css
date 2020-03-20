@@ -24,6 +24,7 @@ header .call-to-action{
 }
 
 header .call-to-action svg{
+  display: none;
   width: 2rem;
   height: 2rem;
   vertical-align: middle;
@@ -38,9 +39,9 @@ header .call-to-action svg{
   /* margin-left: 1rem; */
   /* margin-right: auto; */
   position: absolute;
-  left: 1rem;
   top: 0;
   font-size: 48px;
+  left: 6px;
 }
 
 .site-title a {
@@ -57,10 +58,11 @@ header .call-to-action svg{
 }
 
 .user-container a {
-  margin: 5px;
+  margin: 1px;
 }
 
 .user-container svg{
+  display: none;
   width: 2rem;
   height: 2rem;
   fill: #FFF;
@@ -93,6 +95,12 @@ header .call-to-action svg{
       margin-left: auto;
       position: absolute;
       font-size: 42px;
+  }
+  .user-container svg{
+    display: inline-block;
+  }
+  header .call-to-action svg{
+    display: inline-block;
   }
 } 
 
