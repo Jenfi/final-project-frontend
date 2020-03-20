@@ -1,0 +1,44 @@
+.card-options {
+  text-align: right;
+}
+
+.card-sell-status {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.card-check-mark {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.75rem;
+  width: 12px;
+  height: 12px;
+}
+
+.card-check-mark::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  width: 3px;
+  background-color: #006600;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.card-check-mark::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #006600;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.card-sell-status-button {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+}

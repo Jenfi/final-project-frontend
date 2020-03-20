@@ -8,6 +8,7 @@ import { CardLink } from '../components/card/CardLink'
 import { CardList } from '../components/card/CardList'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
+import { CardOptions } from '../components/card/CardOptions'
 import { fetchDataWithHeaders } from '../services/api'
 import '../styling/profilepage.css'
 
@@ -63,6 +64,7 @@ export const ProfilePage = () => {
                         <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
                       </Heading>
                       <Text className="price-tag">{ad.price} SEK</Text>
+                      <CardOptions adId={ad._id} sold={ad.sold} />
                     </Card>
                   ))}
                 </CardList>
