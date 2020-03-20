@@ -1,13 +1,35 @@
+/* <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> --> */
+
 header {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   background: black;
   color: #FFF;
   height: 4rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-family: 'Arsenal';
+}
+
+header .call-to-action{
+  align-self: center;
+  background-color: transparent;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 0.5rem 0.9rem;
+
+}
+
+header .call-to-action svg{
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  fill: white;
+  stroke: white;
 }
 
 .site-title {
@@ -35,6 +57,7 @@ header {
 
 .user-container svg{
   width: 2rem;
+  height: 2rem;
   fill: #FFF;
   stroke: #FFF;
 }
@@ -45,10 +68,13 @@ header {
 }
 
 .sign-out-button{
-  align-self: flex-end;
   background-color: #000;
   border: none;
   color: #fff;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  padding: 0.5rem 0.9rem;
+  margin: 5px 5px 9px 5px;
 }

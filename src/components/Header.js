@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styling/header.css'
 import { ReactComponent as User } from 'assets/images/user.svg'
+import { ReactComponent as CreateAd } from 'assets/images/add-ad.svg'
+
 
 {/* <div>Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */ }
 
@@ -16,10 +18,17 @@ export const Header = (props) => {
     <header>
       <h1 className="site-title"><Link to="/">HAGGLE</Link></h1>
       <div className="user-container">
-        {/* if signed in render <p>{user.name}</p> */}
+        <Link
+          className="call-to-action" to="/create-ad">
+          <CreateAd aria-label="hidden" />
+          Create ad
+        </Link>
         {props.isLoggedIn && (
           <>
-            <User />
+            <Link className="call-to-action" to="/profile">
+              <User aria-label="Go to Profile" />
+              My Profile
+            </Link>
             <button type="button" className="sign-out-button" onClick={handleSignOut}>Sign out</button>
           </>
         )}
