@@ -10,3 +10,13 @@ export const fetchDataWithHeaders = async (url, headerOptions) => {
   const json = await response.json()
   return json
 }
+
+export const updateData = async (url) => {
+  const response = await fetch(url, {
+    method: 'Put',
+    body: '',
+    headers: { 'Content-Type': 'application/json' }
+  })
+  const json = await response.json()
+  return json
+}

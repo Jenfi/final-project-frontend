@@ -6,6 +6,7 @@ import { CardImage } from '../components/card/CardImage'
 import { CardLink } from '../components/card/CardLink'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
+import { CardOptions } from '../components/card/CardOptions'
 import '../styling/profilepage.css'
 import userlogo from '../assets/images/userlogo.png'
 import { Spinner } from 'components/Spinner'
@@ -63,6 +64,7 @@ export const ProfilePage = () => {
                         <CardLink to={`/adverts/${ad._id}`}>{ad.title}</CardLink>
                       </Heading>
                       <Text className="price-tag">{ad.price} SEK</Text>
+                      <CardOptions adId={ad._id} sold={ad.sold} />
                     </Card>
                   ))}
                 </CardList>
