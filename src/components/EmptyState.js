@@ -1,10 +1,7 @@
 import React from 'react'
-import { ReactComponent as Sofa } from '../assets/images/sofa.svg'
 import { Link } from 'react-router-dom'
+import { ReactComponent as Sofa } from '../assets/images/sofa.svg'
 import '../styling/emptystate.css'
-
-// Attribution:
-//<div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 export const EmptyState = (props) => {
   return (

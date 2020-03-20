@@ -7,7 +7,6 @@ import { SelectOption } from '../components/form/SelectOption'
 import { Textarea } from '../components/form/Textarea'
 import '../styling/form.css'
 
-
 const API_URL = process.env.REACT_APP_API_ADVERTS
 
 export const AdvertCreationPage = () => {
@@ -152,8 +151,7 @@ export const AdvertCreationPage = () => {
             onChange={(event) => setAdPrice(event.target.value)}
             value={adPrice}
             required="required"
-            requirements="Price must be 1 SEK or higher."
-          />
+            requirements="Price must be 1 SEK or higher." />
 
           <Select
             className="required-input"
@@ -180,7 +178,7 @@ export const AdvertCreationPage = () => {
           <button
             type="submit">
             Save ad
-            </button>
+          </button>
         </Form>
       )
       }

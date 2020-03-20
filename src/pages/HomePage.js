@@ -12,7 +12,6 @@ import { Spinner } from '../components/Spinner'
 import '../styling/hero.css'
 import '../styling/adListing.css'
 
-
 export const HomePage = () => {
   const [ads, setAds] = useState([])
   const [isLoading, setIsLoading] = useState(false)

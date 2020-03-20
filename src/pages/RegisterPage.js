@@ -7,7 +7,7 @@ import { CreatedUserMessage } from '../components/CreatedUserMessage'
 import { registerUser } from '../services/auth'
 import '../styling/form.css'
 
-export const RegisterPage = (props) => {
+export const RegisterPage = () => {
   const [userInput, setUserInput] = useState({})
   const [success, setSuccess] = useState(false)
 
