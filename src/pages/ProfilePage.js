@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import { fetchData, fetchDataWithHeaders } from '../services/api'
-import { CardList } from '../components/card/CardList'
+import { EmptyState } from 'components/EmptyState'
+import { Spinner } from 'components/Spinner'
+import React, { useEffect, useState } from 'react'
+import userlogo from '../assets/images/userlogo.png'
 import { Card } from '../components/card/Card'
 import { CardImage } from '../components/card/CardImage'
 import { CardLink } from '../components/card/CardLink'
+import { CardList } from '../components/card/CardList'
 import { Heading } from '../components/card/Heading'
 import { Text } from '../components/card/Text'
 import { CardOptions } from '../components/card/CardOptions'
+import { fetchDataWithHeaders } from '../services/api'
 import '../styling/profilepage.css'
-import userlogo from '../assets/images/userlogo.png'
-import { Spinner } from 'components/Spinner'
-import { EmptyState } from 'components/EmptyState'
 
 export const ProfilePage = () => {
   const [userProfile, setUserProfile] = useState()

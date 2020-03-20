@@ -7,7 +7,7 @@ export const CreatedAdMessage = (props) => {
         <article className="created-ad-container">
             <h1 className="ad-created-message-title">Nice!</h1>
             <p className="ad-created-infotext">Your ad is now published.</p>
-            <Link to={`/adverts/${props.adId}`} className="to-adverts-list">View all listings </Link>
+            <Link to={`/adverts/${props.adId}`} className="to-adverts-list">View ad </Link>
         </article>
     )
 }
