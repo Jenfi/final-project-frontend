@@ -15,7 +15,7 @@ import '../styling/adListing.css'
 export const HomePage = () => {
   const [ads, setAds] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  const ADS_URL = process.env.REACT_APP_API_ADVERTS
+  const ADS_URL = `${process.env.REACT_APP_API_ADVERTS}/?limit=6`
 
   useEffect(() => {
     setIsLoading(true)
