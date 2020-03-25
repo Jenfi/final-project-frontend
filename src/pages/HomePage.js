@@ -44,7 +44,7 @@ export const HomePage = () => {
           ))}
         </CardList>
         <p className="ads-navigation">
-          <Link to="/adverts">All ads <i className="icon-arrow arrow-right" aria-hidden="true"></i></Link>
+          <Link to="/adverts">All ads <i className="icon-arrow arrow-right" aria-hidden="true" /></Link>
         </p>
       </section>
     </>

@@ -26,7 +26,9 @@ export const AdvertPage = () => {
     <>
       {!isLoading && (
         <article className="product">
-          {isLoading ? <Spinner /> : <img className="product-image" src={advert.product.imageUrl} alt={advert.product.title} />}
+          {isLoading
+            ? <Spinner />
+            : <img className="product-image" src={advert.product.imageUrl} alt={advert.product.title} />}
           <h2 className="product-name">{advert.product.title}</h2>
           <p className="product-price">{advert.product.price} SEK</p>
           <section className="product-description product-section">
@@ -45,7 +47,12 @@ export const AdvertPage = () => {
               <li><span className="product-attribute">Delivery:</span> {advert.product.delivery}</li>
               <li><span className="product-attribute">Seller:</span> {advert.seller.name}</li>
             </ul>
-            <a className="contact-seller" href={`mailto:${advert.seller.email}?subject=I want buy your product: ${advert.product.title} (${advert.product._id})`}><Mail />Contact seller</a>
+            <a
+              className="contact-seller"
+              href={`mailto:${advert.seller.email}?subject=I want buy your product: ${advert.product.title} (${advert.product._id})`}>
+              <Mail />
+              Contact seller
+            </a>
           </section>
           <p className="publishing-details">{`Posted: ${moment(advert.product.publishedDate).format('dddd, MMMM Do YYYY, H:mm ')}`}</p>
         </article>

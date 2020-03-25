@@ -12,38 +12,47 @@ export const Hero = () => {
     <section className="hero">
       <div className="auto-slider">
         <ul className="auto-slider_content">
-          <li> <img
-            className="hero-image"
-            src={chair}
-            alt="Chair" />
+          <li>
+            <img
+              className="hero-image"
+              src={chair}
+              alt="Chair" />
           </li>
-          <li> <img
-            className="hero-image"
-            src={vase}
-            alt="Vase" />
+          <li>
+            <img
+              className="hero-image"
+              src={vase}
+              alt="Vase" />
           </li>
-          <li> <img
-            className="hero-image"
-            src={stool}
-            alt="Chair and stool" />
+          <li>
+            <img
+              className="hero-image"
+              src={stool}
+              alt="Chair and stool" />
           </li>
-          <li> <img
-            className="hero-image"
-            src={leatherSofa}
-            alt="Sofa" />
+          <li>
+            <img
+              className="hero-image"
+              src={leatherSofa}
+              alt="Sofa" />
           </li>
-          <li> <img
-            className="hero-image"
-            src={lamp}
-            alt="Lamp" />
+          <li>
+            <img
+              className="hero-image"
+              src={lamp}
+              alt="Lamp" />
           </li>
         </ul>
       </div>
-      <div className="hero-strip-overlay"></div>
+      <div className="hero-strip-overlay" />
       <div className="hero-content">
         <h2 className="hero-title">Furniture made easy.</h2>
         <p className="hero-tagline">We help you sell your used furniture and give them a new home.</p>
-        <Link className="call-to-action" to="/create-ad">Start selling</Link>
+        <Link
+          className="call-to-action"
+          to="/create-ad">
+          Start selling
+        </Link>
       </div>
     </section>
   )

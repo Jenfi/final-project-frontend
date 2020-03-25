@@ -52,7 +52,9 @@ export const AdvertCreationPage = () => {
     <>
       {successfulCreation && <CreatedAdMessage adId={adId} />}
       {!successfulCreation && (
-        <Form onSubmit={handleFormSubmit} className="ad-form">
+        <Form
+          onSubmit={handleFormSubmit}
+          className="ad-form">
           <h2 className="ad-form-heading">Create ad</h2>
           <Input
             className="required-input"
@@ -72,8 +74,7 @@ export const AdvertCreationPage = () => {
               id="fileInput"
               ref={fileInput}
               required
-              type="file"
-            />
+              type="file" />
             <span className="requirements">Ads must have an image.</span>
           </label>
           <Select
@@ -83,7 +84,7 @@ export const AdvertCreationPage = () => {
             onChange={(event) => setAdCategory(event.target.value)}
             required="required"
             requirements="Select a category from the list"
-            value={adCategory} >
+            value={adCategory}>
             <SelectOption
               disabled="disabled"
               option="Select a product category"
@@ -180,8 +181,7 @@ export const AdvertCreationPage = () => {
             Save ad
           </button>
         </Form>
-      )
-      }
+      )}
     </>
   )
 }

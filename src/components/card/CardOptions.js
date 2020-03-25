@@ -20,7 +20,12 @@ export const CardOptions = (props) => {
         </p>
       )}
       {!isSold && (
-        <button className="card-sell-status-button" type="button" onClick={handleOnClick}>Mark as sold</button>
+        <button
+          className="card-sell-status-button"
+          type="button"
+          onClick={handleOnClick}>
+          Mark as sold
+        </button>
       )}
     </div>
   )
