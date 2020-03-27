@@ -5,45 +5,20 @@
     grid-template-columns: repeat(1, 1fr);
     list-style: none;
     margin: 0 auto;
-    padding:  2rem 1rem 2rem 1rem;
+    padding:  2rem 0 2rem 0;
     max-width: 31.25rem;
-    width: 100%;
+    width: 90%;
 }
 
 .ad-listing-header {
+    border-bottom: 1px solid #000;
     margin: 0 auto;
-    border-bottom: 1px solid;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 0;
     max-width: 31.25rem;
-    width: 100%;
+    width: 90%;
 }
 
-.ads-navigation {
-    font-size: 1.5rem;
-    margin: 0 auto;
-    padding: 0 1rem 2rem 1rem;
-    max-width: 31.25rem;
-    width: 100%;
-}
-
-.ad-listing a,
-.ads-navigation a {
-    color: #000;
-    text-decoration: none;
-}
-
-.icon-arrow {
-    border: solid #000;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
-    vertical-align: middle;
-  }
-  
-.arrow-right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
+/* Card */
 
 .ad-card {
     grid-column: 1 / span 1;
@@ -67,24 +42,50 @@
     margin-top: 2px;
 }
 
+/* Navigation */
 .ads-navigation {
-   text-align: right;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
+    text-align: right;
+    max-width: 31.25rem;
+    width: 100%;
+}
+
+.ad-listing a,
+.ads-navigation a {
+    color: #000;
+    text-decoration: none;
+}
+
+.icon-arrow {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    vertical-align: middle;
+  }
+  
+.arrow-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 41.75rem) {
     .ad-listing {
         grid-template-columns: repeat(2, 1fr);
         max-width: 40rem;
+        width: 100%;
     }
 
     .ad-listing-header,
     .ads-navigation { 
         max-width: 40rem;
+        width: 100%;
     }
-    
+
     .ad-card {
         grid-column: auto;
-        width: 100%;
     }
 }
 
@@ -97,9 +98,5 @@
     .ad-listing-header,
     .ads-navigation { 
         max-width: 62.5rem;
-    }
-    
-    .ad-card {
-        width: 100%;
     }
 }

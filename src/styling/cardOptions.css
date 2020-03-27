@@ -6,37 +6,42 @@
   font-size: 0.75rem;
   font-weight: bold;
 }
+
+/* Check mark */
+
 .card-check-mark {
-  position: relative;
   display: inline-block;
   margin-right: 0.75rem;
+  position: relative;
   width: 12px;
   height: 12px;
 }
 
 .card-check-mark::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 50%;
-  width: 3px;
   background-color: #006600;
   content: "";
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 50%;
   transform: translateX(10px) rotate(-45deg);
   transform-origin: left bottom;
+  width: 3px;
 }
 
 .card-check-mark::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
   background-color: #006600;
+  bottom: 0;
   content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
   transform: translateX(10px) rotate(-45deg);
   transform-origin: left bottom;
+  width: 100%;
 }
+
+/* Button */ 
 
 .card-sell-status-button {
   padding: 0.5rem 0.75rem;

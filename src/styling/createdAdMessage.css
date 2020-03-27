@@ -1,16 +1,29 @@
-.ad-created-message-title {
-    font-size: 45px;
-    color: black;
-    font-family: 'Arsenal';
+.created-ad-container {
+    align-items: center;
+    background-color: #faf9f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem auto 2rem auto;
+    padding: 2rem 1rem;
+    max-width: 31.25rem;
+    width: 100%;
 }
 
-.ad-created-infotext {
-    font-size: 27px;
-    margin: 30px;
+.created-ad-message-title {
     font-family: 'Arsenal';
+    font-size: 2.8125rem;
+    color: #000;
 }
 
-.to-adverts-list {
+.created-ad-infotext {
+    font-family: 'Arsenal';
+    font-size: 1.6875rem;
+    margin: 1rem 0 1.8rem 0;
+    text-align: center;
+}
+
+.created-ad-button {
     background-color: #000;
     border: none;
     color: #fff;
@@ -19,20 +32,8 @@
     text-decoration: none;
 }
 
-.created-ad-container {
-    background-color: #faf9f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 8rem auto 2rem auto;
-    padding: 2rem 1rem;
-    max-width: 500px;
-    width: 100%;
-}
-
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 41.75rem) {
     .created-ad-container {
-      /* max-width: 600px; */
+      margin-top: 4rem;
     }
 }

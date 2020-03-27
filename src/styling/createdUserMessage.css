@@ -1,38 +1,39 @@
-.created-user-title {
-    font-size: 45px;
-    color: black;
-    font-family: 'Arsenal';
-}
-
-.created-user-infotext {
-    font-size: 27px;
-    margin: 30px;
-    font-family: 'Arsenal';
-}
-
-.to-sign-in {
-        background-color: #000;
-        border: none;
-        color: #fff;
-        font-size: 1rem;
-        padding: 1rem 2rem;
-        text-decoration: none;
-}
-
 .created-user-container {
+    align-items: center;
     background-color: #faf9f8;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    margin: 8rem auto 2rem auto;
+    justify-content: center;
+    margin: 2rem auto 2rem auto;
     padding: 2rem 1rem;
-    max-width: 500px;
+    max-width: 31.25rem;
     width: 100%;
 }
 
-@media screen and (min-width: 668px) {
+.created-user-title {
+    font-family: 'Arsenal';
+    font-size: 2.8125rem;
+    color: #000;
+}
+
+.created-user-infotext {
+    font-family: 'Arsenal';
+    font-size: 1.6875rem;
+    margin: 1rem 0 1.8rem 0;
+    text-align: center;
+}
+
+.created-user-button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 41.75rem) {
     .created-user-container {
-      /* max-width: 600px; */
+      margin-top: 4rem;
     }
 }
