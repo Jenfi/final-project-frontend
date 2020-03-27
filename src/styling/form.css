@@ -1,18 +1,23 @@
-/* Warning sign
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-*/
-
 .ad-form,
 .sign-in-form,
 .register-form {
   background-color: #faf9f8;
   display: flex;
   flex-direction: column;
-  margin: 8rem auto 2rem auto;
+  margin: 4rem auto 2rem auto;
   padding: 2rem 1rem;
-  max-width: 500px;
+  max-width: 31.25rem;
   width: 100%;
 }
+
+.ad-form-heading,
+.sign-in-heading,
+.register-heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form fields, labels and buttons */
 
 label {
   font-size: 0.875rem;
@@ -32,25 +37,8 @@ textarea {
   width: 100%;
 }
 
-textarea{
+textarea {
   resize: none;
-}
-
-.required-input::after {
-  content: ' *';
-  color: red;
-}
-
-.ad-form-heading,
-.sign-in-heading,
-.register-heading {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.change-form {
-  margin-top: 20px;
-  text-align: right;
 }
 
 button {
@@ -58,37 +46,53 @@ button {
   background-color: #000;
   border: none;
   color: #fff;
+  font-family: 'Arsenal';
   font-size: 1rem;
   padding: 1rem 2rem;
-  font-family: arsenal;
 }
+
+/* Switch to other form */
+
+.change-form {
+  margin-top: 1.25rem;
+  text-align: right;
+}
+
+/* Error message */
 
 .error-message {
   background: #ff6f8a78;
   border-radius: 0.2rem;
-  padding: 0.7rem;
-  margin-bottom: 2rem;
   display: flex;
+  margin-bottom: 2rem;
+  padding: 0.7rem;
 }
 
-.error-message svg{
-  width: 1.4rem;
+.error-message svg {
   margin-right: 0.5rem;
+  width: 1.4rem;
 }
 
-.requirements{
+/* Requirements info for inputs */
+
+.required-input::after {
+  content: " *";
+  color: #ff0000;
+}
+
+.requirements {
   display: none;
   font-size: 0.75rem;
   margin-left: 0.3rem;
 }
 
-select:invalid:focus +.requirements, 
-input:invalid:focus +.requirements,
-textarea:invalid:focus +.requirements{
+select:invalid:focus + .requirements, 
+input:invalid:focus + .requirements,
+textarea:invalid:focus + .requirements{
   display: block;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 41.75rem) {
   .ad-form,
   .sign-in-form,
   .register-form {
