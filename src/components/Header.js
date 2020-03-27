@@ -4,10 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styling/header.css'
 
-{/* <div>Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */ }
-
 export const Header = (props) => {
-
   const handleSignOut = () => {
     localStorage.clear()
     props.setLogInState()
@@ -15,22 +12,25 @@ export const Header = (props) => {
 
   return (
     <header>
-      <h1 className="site-title"><Link to="/">HAGGLE</Link></h1>
-      <div className="user-container">
+      <h1 className="site-title">
+        <Link to="/">HAGGLE</Link>
+      </h1>
+      <div className="user-options-container">
         <Link
-          className="call-to-action"
+          className="user-options-link"
           to="/create-ad">
-          <CreateAd aria-label="hidden" />
+          <CreateAd aria-hidden="true" />
           Create ad
         </Link>
 
         {props.isLoggedIn && (
           <>
-            <Link className="call-to-action" to="/profile">
-              <User aria-label="Go to Profile" />
+            <Link className="user-options-link" to="/profile">
+              <User aria-hidden="true" />
               My Profile
             </Link>
-            <button type="button"
+            <button
+              type="button"
               className="sign-out-button"
               onClick={handleSignOut}>
               Sign out
@@ -42,12 +42,12 @@ export const Header = (props) => {
           <>
             <Link
               to="/sign-in"
-              className="sign-in-link">
+              className="user-options-link">
               Sign in
             </Link>
             <Link
               to="/register"
-              className="registration-link">
+              className="user-options-link">
               Register
             </Link>
           </>
