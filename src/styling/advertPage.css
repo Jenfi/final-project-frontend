@@ -1,23 +1,21 @@
-/* <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
-
 .product {
   line-height: 1.6;
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto 1rem auto;
   max-width: 25rem;
-  width: 100%;
+  width: 90%;
 }
 
 .product-image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  max-height: 400px;
+  width: 100%;
 }
 
 .product-name {
   font-size: 1.2rem;
   line-height: 1.3;
-  padding: 1rem 1.5rem 0 1.5rem;
+  padding: 1rem 1.5rem 0 0;
   word-break: break-all;
 }
 
@@ -25,12 +23,15 @@
   font-size: 1.2rem;
   font-weight: 700;
   padding-bottom: 1rem;
-  padding-left: 1.5rem;
 }
+
+/* Product details section */ 
 
 .product-section {
   border-top: 1px solid #e3e3e3;
-  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 100%;
 }
 
 .product-section-heading {
@@ -39,7 +40,7 @@
 }
 
 .product-details-list {
-  margin: 12px 12px 30px 0;
+  margin: 0.75rem 0;
   list-style: none;
 }
 
@@ -47,46 +48,35 @@
   font-weight: 700;
 }
 
-.publishing-details{
-  font-size: 0.8rem;
-  margin-left: 1.5rem;
-}
+/* Seller details */
 
 .seller {
   margin-bottom: 1rem;
 }
 
-.contact-seller{
+.contact-seller {
   background-color: #000;
   border: none;
   color: #fff;
+  display: inline-block;
   font-size: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   text-decoration: none;
 }
 
-.contact-seller svg{
-  width: 1.5rem;
+.contact-seller svg {
+  fill: #fff;
   height: auto;
-  fill: #FFF;
-  fill: #FFF;
-  vertical-align: middle;
   margin-right: 0.8rem;
+  vertical-align: middle;
+  width: 1.5rem;
 }
 
-@media screen and (min-width: 25rem) {
-  .product-name,
-  .product-price {
-    padding-left: 0;
-  }
+/* Publishing details */
 
-  .product-section {
-    padding: 1rem 0;
-  }
-
-  .publishing-details{
-    margin-left: 0;
-  }
+.publishing-details{
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 41.75rem) {
