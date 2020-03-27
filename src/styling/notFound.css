@@ -1,38 +1,38 @@
-.not-found-page-title {
-    font-size: 38px;
-    color: red;
-    font-family: 'Arsenal';
+.not-found-container {
+	align-items: center;
+	background-color: #faf9f8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 4rem auto 2rem auto;
+	padding: 2rem 1rem;
+	max-width: 500px;
+	width: 100%;
 }
 
-.not-found-info-text {
-    font-size: 22px;
-    margin: 30px;
-    font-family: 'Arsenal';
+.not-found-title {
+	font-family: 'Arsenal';
+	font-size: 2.375rem;
+	color: #ff0000;
 }
 
-.back-to-homepage {
-    background-color: #000;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    text-decoration: none;
+.not-found-infotext {
+	font-family: 'Arsenal';
+	font-size: 1.375rem;
+	margin: 1.875rem;
 }
 
-.error-message-container {
-    background-color: #faf9f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 8rem auto 2rem auto;
-    padding: 2rem 1rem;
-    max-width: 500px;
-    width: 100%;
+.back-button {
+	background-color: #000;
+	border: none;
+	color: #fff;
+	font-size: 1rem;
+	padding: 1rem 2rem;
+	text-decoration: none;
 }
 
-@media screen and (min-width: 668px) {
-    .error-message-container {
-      max-width: 600px;
-    }
+@media screen and (min-width: 41.75rem) {
+	.not-found-container {
+		max-width: 600px;
+	}
 }
